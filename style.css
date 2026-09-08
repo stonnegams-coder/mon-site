@@ -1,0 +1,1474 @@
+/* =========================================================
+   STONNEGAMS — STYLE GLOBAL
+   Inspiration : SaaS / Analytics / Dark Premium
+   ========================================================= */
+
+/* -------------------------
+   GOOGLE FONTS
+------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* -------------------------
+   VARIABLES
+------------------------- */
+:root {
+    --bg: #050505;
+    --bg-secondary: #0b0d0e;
+    --section: #15191c;
+    --card: #181a1c;
+    --card-hover: #202326;
+
+    --red: #ed171c;
+    --red-dark: #b90e13;
+    --red-light: #ff3439;
+
+    --white: #ffffff;
+    --text: #eeeeee;
+    --muted: #a8abad;
+    --border: rgba(255, 255, 255, 0.12);
+
+    --radius: 8px;
+    --transition: 0.3s ease;
+}
+
+
+/* -------------------------
+   RESET
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: relative;
+    min-height: 650px;
+    padding-bottom: 100px;
+    background:
+        radial-gradient(
+            circle at 15% 55%,
+            rgba(237, 23, 28, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(237, 23, 28, 0.12),
+            transparent 30%
+        ),
+        #050505;
+    overflow: hidden;
+}
+
+
+/* -------------------------
+   Décoration lumineuse
+------------------------- */
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    right: -180px;
+    top: 100px;
+
+    background: rgba(237, 23, 28, 0.10);
+    filter: blur(100px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 320px;
+    right: 13%;
+    top: 170px;
+
+    background: linear-gradient(
+        transparent,
+        var(--red),
+        transparent
+    );
+
+    opacity: 0.4;
+}
+
+
+/* =========================================================
+   BANNER
+   ========================================================= */
+
+.banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 55%;
+    height: 100%;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #050505 0%,
+            rgba(5, 5, 5, 0.85) 18%,
+            rgba(5, 5, 5, 0.15) 65%,
+            rgba(5, 5, 5, 0.45) 100%
+        );
+}
+
+.banner-img,
+.banner-img-2,
+.banner-img-3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    padding-top: 12px;
+}
+
+.navbar {
+    width: min(92%, 1160px);
+    min-height: 58px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 14px;
+
+    background: rgba(25, 27, 29, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.stonnegams {
+    position: relative;
+
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+
+    color: var(--white);
+}
+
+.stonnegams::first-letter {
+    color: var(--red);
+}
+
+
+/* MENU */
+
+.links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.links li a {
+    position: relative;
+
+    color: #c5c5c5;
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.links li a:hover {
+    color: var(--white);
+}
+
+.links li a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--red);
+
+    transition: width var(--transition);
+}
+
+.links li a:hover::after,
+.links li a.active::after {
+    width: 100%;
+}
+
+.links li a.active {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    border: none;
+
+    padding: 11px 22px;
+
+    border-radius: 6px;
+
+    background: var(--red);
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+}
+
+button:hover {
+    background: var(--red-light);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(237, 23, 28, 0.30);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+header > .title,
+header > .paragraph,
+header > button {
+    position: relative;
+    z-index: 3;
+}
+
+.title {
+    width: min(600px, 90%);
+
+    margin-left: max(5%, calc((100% - 1160px) / 2));
+    padding-top: 105px;
+
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+
+    font-weight: 800;
+    letter-spacing: -2.5px;
+
+    color: var(--white);
+}
+
+.title strong {
+    color: var(--red);
+}
+
+.paragraph {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Hero paragraph */
+
+header > .paragraph {
+    width: min(480px, 90%);
+
+    margin-top: 22px;
+    margin-left: max(5%, calc((100% - 1160px) / 2));
+}
+
+
+/* Hero button */
+
+header > button {
+    margin-top: 28px;
+    margin-left: max(5%, calc((100% - 1160px) / 2));
+
+    padding: 13px 30px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.content {
+    width: 100%;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services {
+    position: relative;
+
+    width: min(1160px, 92%);
+
+    margin: -45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    z-index: 5;
+}
+
+.services figure {
+    min-height: 190px;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1d1f,
+            #121416
+        );
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    transition: var(--transition);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.30);
+}
+
+.services figure:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(237, 23, 28, 0.45);
+
+    background: var(--card-hover);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Icônes */
+
+.services img {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 18px;
+
+    padding: 11px;
+
+    background: var(--red);
+
+    border-radius: 7px;
+
+    object-fit: contain;
+}
+
+
+/* Titres */
+
+.services figcaption {
+    margin-bottom: 8px;
+
+    color: var(--white);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.services figure span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SECTION POURQUOI STONNEGAMS
+   ========================================================= */
+
+.infos {
+    position: relative;
+
+    min-height: 360px;
+
+    margin-top: 0;
+    padding: 90px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(237, 23, 28, 0.10),
+            transparent 30%
+        ),
+        #161a1d;
+
+    overflow: hidden;
+}
+
+.infos::before {
+    content: "";
+
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    right: 5%;
+    top: 30px;
+
+    border: 1px solid rgba(237, 23, 28, 0.15);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 80px rgba(237, 23, 28, 0.08);
+}
+
+.infos .slide-1 {
+    position: absolute;
+
+    right: 7%;
+    top: 50%;
+
+    width: 350px;
+    height: 250px;
+
+    transform: translateY(-50%);
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   TITRES DE SECTION
+   ========================================================= */
+
+.sub {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 20px;
+
+    color: var(--white);
+
+    font-size: 30px;
+    line-height: 1.2;
+
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
+/* Infos paragraph */
+
+.infos > .paragraph {
+    position: relative;
+    z-index: 2;
+
+    width: min(550px, 90%);
+
+    color: #b8bbbd;
+}
+
+
+/* =========================================================
+   TARIFS
+   ========================================================= */
+
+.tarifs {
+    position: relative;
+
+    width: min(1160px, 92%);
+
+    margin: auto;
+}
+
+
+/* Section tarifs */
+
+section.tarifs {
+    padding: 90px 0 100px;
+
+    text-align: center;
+
+    background: #0a0a0a;
+}
+
+section.tarifs > .sub {
+    margin-bottom: 35px;
+}
+
+
+/* Cartes tarifaires */
+
+section.tarifs > .tarifs-1 {
+    display: inline-flex;
+    vertical-align: top;
+
+    width: calc(33.333% - 15px);
+    min-height: 320px;
+
+    margin: 0 5px;
+
+    padding: 28px 22px;
+
+    flex-direction: column;
+    text-align: left;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171819,
+            #0e0f10
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+
+    transition: var(--transition);
+}
+
+section.tarifs > .tarifs-1:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(237, 23, 28, 0.5);
+}
+
+
+/* Carte centrale */
+
+section.tarifs > .tarifs-1:nth-of-type(3) {
+    background:
+        linear-gradient(
+            145deg,
+            #e7191e,
+            #a90d11
+        );
+
+    border-color: var(--red);
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 50px rgba(237, 23, 28, 0.18);
+}
+
+section.tarifs > .tarifs-1:nth-of-type(3):hover {
+    transform: translateY(-15px);
+}
+
+
+/* Nom du plan */
+
+.h3 {
+    color: var(--white);
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+/* Liste */
+
+section.tarifs > .tarifs-1 > ul.tarifs {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+section.tarifs > .tarifs-1 > ul.tarifs li {
+    position: relative;
+
+    padding: 7px 0 7px 22px;
+
+    color: #c6c6c6;
+
+    font-size: 13px;
+}
+
+section.tarifs > .tarifs-1 > ul.tarifs li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--red);
+    font-weight: 700;
+}
+
+section.tarifs > .tarifs-1:nth-of-type(3) > ul.tarifs li {
+    color: white;
+}
+
+section.tarifs > .tarifs-1:nth-of-type(3) > ul.tarifs li::before {
+    color: white;
+}
+
+
+/* Prix */
+
+.price {
+    display: block;
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    color: var(--white);
+
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PORTFOLIO / RÉALISATIONS
+   ========================================================= */
+
+.examples {
+    padding: 90px 0 110px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(237, 23, 28, 0.08),
+            transparent 35%
+        ),
+        #080909;
+}
+
+.exemples-content {
+    width: min(1160px, 92%);
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.exemples-content > .sub {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* Cartes projets */
+
+article {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    min-height: 390px;
+
+    background: #161819;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 8px;
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+article:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(237, 23, 28, 0.45);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Images projets */
+
+article img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+
+    background:
+        linear-gradient(
+            135deg,
+            #24282a,
+            #101112
+        );
+}
+
+
+/* Si image absente */
+
+.ex-1,
+.ex-2,
+.ex-3,
+.ex-4,
+.ex-5,
+.ex-6 {
+    background:
+        radial-gradient(
+            circle at 70% 40%,
+            rgba(237, 23, 28, 0.35),
+            transparent 30%
+        ),
+        #191c1e;
+}
+
+
+/* Titre article */
+
+.article {
+    display: block;
+
+    padding: 20px 20px 7px;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* Description */
+
+article .paragraph {
+    padding: 0 20px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* Bouton article */
+
+article button {
+    align-self: flex-start;
+
+    margin: auto 20px 20px;
+
+    padding: 9px 20px;
+}
+
+
+/* =========================================================
+   PAGE CONTACT
+   ========================================================= */
+
+.formular {
+    width: min(760px, 92%);
+
+    margin: auto;
+
+    padding: 90px 0;
+
+    text-align: center;
+}
+
+.formular .sub {
+    margin-bottom: 35px;
+}
+
+
+/* Formulaire */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    padding: 35px;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181a1c,
+            #0f1011
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+form .h3 {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+/* Champs */
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background: #0b0c0d;
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #777;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--red);
+
+    box-shadow:
+        0 0 0 3px rgba(237, 23, 28, 0.08);
+}
+
+
+/* Message */
+
+form textarea {
+    grid-column: 1 / -1;
+
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+/* Bouton formulaire */
+
+form input[type="button"] {
+    grid-column: 1 / -1;
+
+    border: none;
+
+    background: var(--red);
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+form input[type="button"]:hover {
+    background: var(--red-light);
+}
+
+
+/* =========================================================
+   MAPS
+   ========================================================= */
+
+.plans {
+    padding: 80px 5% 100px;
+
+    text-align: center;
+
+    background: #15191c;
+}
+
+.plans .h3 {
+    margin-bottom: 30px;
+}
+
+.plans iframe {
+    width: min(900px, 100%);
+    height: 420px;
+
+    border-radius: 8px;
+
+    filter: grayscale(0.85) contrast(1.1);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    position: relative;
+
+    padding: 70px 5% 25px;
+
+    background: #030303;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+}
+
+
+/* CTA */
+
+footer h2 {
+    margin-bottom: 25px;
+
+    color: white;
+
+    font-size: clamp(24px, 3vw, 34px);
+
+    letter-spacing: -1px;
+}
+
+footer > button {
+    margin-bottom: 45px;
+}
+
+
+/* Footer menu */
+
+footer .links {
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+footer .menu {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+footer .menu li a {
+    color: #888;
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+footer .menu li a:hover {
+    color: var(--red);
+}
+
+
+/* Copyright */
+
+.footer {
+    display: block;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+header > .paragraph {
+    animation: fadeUp 1s ease forwards;
+}
+
+header > button {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLETTE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        min-height: 600px;
+    }
+
+    .navbar {
+        width: 94%;
+    }
+
+    .links {
+        gap: 18px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .infos .slide-1 {
+        opacity: 0.2;
+        right: 0;
+    }
+
+    .exemples-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section.tarifs > .tarifs-1 {
+        width: calc(50% - 15px);
+
+        margin-bottom: 20px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    body {
+        font-size: 14px;
+    }
+
+
+    /* NAV */
+
+    .navbar {
+        min-height: auto;
+
+        padding: 15px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .logo {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .links {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .links li a {
+        font-size: 12px;
+    }
+
+    .navbar > button {
+        width: 100%;
+    }
+
+
+    /* HERO */
+
+    header {
+        min-height: 650px;
+
+        padding-bottom: 70px;
+    }
+
+    .banner {
+        width: 100%;
+
+        opacity: 0.35;
+    }
+
+    .banner::after {
+        background:
+            linear-gradient(
+                90deg,
+                #050505 0%,
+                rgba(5, 5, 5, 0.65) 100%
+            );
+    }
+
+    .title {
+        width: 90%;
+
+        margin-left: 5%;
+
+        padding-top: 80px;
+
+        font-size: 39px;
+
+        letter-spacing: -1.5px;
+    }
+
+    header > .paragraph {
+        width: 90%;
+
+        margin-left: 5%;
+    }
+
+    header > button {
+        margin-left: 5%;
+    }
+
+
+    /* SERVICES */
+
+    .services {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        margin-top: -30px;
+    }
+
+    .services figure {
+        min-height: auto;
+    }
+
+
+    /* INFOS */
+
+    .infos {
+        padding: 70px 5%;
+
+        min-height: 450px;
+    }
+
+    .infos .slide-1 {
+        width: 100%;
+        height: 100%;
+
+        right: 0;
+        top: 0;
+
+        transform: none;
+
+        opacity: 0.12;
+    }
+
+    .sub {
+        font-size: 27px;
+    }
+
+
+    /* TARIFS */
+
+    section.tarifs {
+        padding: 70px 5%;
+    }
+
+    section.tarifs > .tarifs-1 {
+        display: flex;
+
+        width: 100%;
+
+        margin: 0 0 20px;
+    }
+
+    section.tarifs > .tarifs-1:nth-of-type(3) {
+        transform: none;
+    }
+
+    section.tarifs > .tarifs-1:nth-of-type(3):hover {
+        transform: translateY(-5px);
+    }
+
+
+    /* PORTFOLIO */
+
+    .examples {
+        padding: 70px 0;
+    }
+
+    .exemples-content {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        min-height: auto;
+    }
+
+
+    /* CONTACT */
+
+    .formular {
+        padding: 70px 0;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+
+        padding: 22px;
+    }
+
+    form .h3,
+    form textarea,
+    form input[type="button"] {
+        grid-column: 1;
+    }
+
+
+    /* MAP */
+
+    .plans {
+        padding: 60px 5%;
+    }
+
+    .plans iframe {
+        height: 330px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 60px 5% 25px;
+    }
+
+    footer .links {
+        flex-wrap: wrap;
+    }
+
+    footer .menu {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+}
+
+
+/* =========================================================
+   PETITS ÉCRANS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .title {
+        font-size: 34px;
+    }
+
+    .links {
+        gap: 12px;
+    }
+
+    .links li a {
+        font-size: 11px;
+    }
+
+    .services figure {
+        padding: 20px;
+    }
+
+    form {
+        padding: 18px;
+    }
+}
+
+
+/* =====================================================
+   BOUTON RETOUR EN HAUT
+   ===================================================== */
+
+#backToTop {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: #ed171c;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    z-index: 9999;
+
+    transition: 0.3s ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: #ff3439;
+
+    transform: translateY(-4px);
+}

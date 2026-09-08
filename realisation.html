@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--head-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations Web | Portfolio Stonnegams</title>
+    <meta name="description" content="Découvrez les derniers sites web vitrines et projets digitaux développés par Stonnegams. Des solutions performantes adaptées aux entreprises et indépendants.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<button id="backToTop" type="button" aria-label="Retour en haut">
+    ↑
+</button>
+
+<script src="script.js"></script>
+<!-- body -->
+<body>
+    
+     <!-- header -->
+     <header>
+
+        <!-- image :(prend toute la zone header) -->
+         <div class="banner">
+            <img src="https://images.pexels.com/photos/6289025/pexels-photo-6289025.jpeg" alt="" class="banner-img-2">
+         </div>
+        <div class="nav">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="stonnegams" id="stonnegams">Stonnegams</span>
+                </div>
+                <!-- menu -->
+                <ul class="links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="realisation.html" class="active">Réalisations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button type="button">Contactez-moi</button>
+            </nav>
+        </div>
+
+        <h1 class="title">Des solutions web concrètes pour des projets ambitieux.</h1>
+        <p class="paragraph">Visionez les exemple ci-dessus</p>
+        <button type="button">Devis</button>
+     </header>
+
+     <!-- main -->
+      <main class="content">
+
+         <section class="examples">
+            <div class="exemples-content">
+                <h2 class="sub">Découvrez mes derniers travaux</h2>
+
+                <article>
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEBUSEhIVFRUXFRAWFhcVFhkWFRgWFRgYFhUVGBgYHiogGBomHRUWITIiJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0mHyUtLS0tLS0tLS0tLS0uLS0tLS0rLS0rLy0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLf/AABEIAN4A4wMBEQACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xABMEAABBAAEAgQICgcGBAcAAAABAAIDEQQSITEFQQYTUWEUIjJScYGRkhcjQlNUobHB0dIHFjOC0+HwFXKEo7LDQ3Oi8SQ0RWN0s8L/xAAaAQEBAQEBAQEAAAAAAAAAAAAAAQMCBAUG/8QAMxEAAgIBAgQEAwcFAQEAAAAAAAECEQMEEiExQVEFExRhInGBFTNSkbHR8DJTocHx4TT/2gAMAwEAAhEDEQA/APV17TzAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQCWgDMoBMyALQBaALQBaALQBaALQBaALQBaALQBaALQBaALQBaALQBaALQBmQC2gC1QKgBACAaSoButE8hqTyA7SVG0uZUmwZG515RdGjVGj2ac1N8e5drF8Hf5hTfHuNrDwd/mFN8e42sPB5PMKb49xtYeDyeYU3x7jaw8Hk8wpvj3G1h4O/zCm+PcbWHg8nmFN8e42sPB3+YU3x7jaw8Hf5hTfHuNrDwd/mFN8e42sPB5PMKb49xtYeDyeYU3x7jaw8Hf5hTfHuNrDweTzCm+PcbWHg8nmFN8e42sgxkvUtDpfEBNAu0F719S4nmxwVydGmLT5MrqEW37FP8AtqD55ntWfrMH40b/AGdqv7b/ACHM4vC40JWk9xUet06Vua/Mj8P1K4vGyTw+Pzx7Vz9oaX+4vzOfRaj8DI5+KwsaXvka1rQS4k0ABuSrHXaaTSU1b9yS0meKtwdGZ+vHD/psHvhenfHuYbWPj6a8PJAGNgJJAADxZJ0ATdHuNrOhBXRyPCoBABQEbyoBY4myRyMc4tvIWuBotc05muFdjgD6ljl6GsAw2AaGm5yxzicxhpg5nQEGjbnOvtceWiypndokfgmkisVOBpoJBX1tvl2pTFl/DysaxresLqAGZxtxrmTzKUxZJ4UzzglMWHhTPOCUxaDwpnnBKFh4SzzglCxfCG+cFKLYeEN84IA8Ib5wQB4Q3zggDwhvnBAHhLPOCtEtCeEs84JQsXwhnnBShYyWQOFCQt7xR/1AhCnP9N8K+XDMZEDI4SNJqrrK4WdhzC8ethKcEoq+J9TwnNjxZm5ulX+0cb/Y+J+idmtO/PS+d5GX8H8/M+763Tf3f0/YkwXB5xJmMDmijtsPaSVhn0meUeEH/Pqc5ddptlLIn/PkaowUtfsb79b+orzLRamvuv5+Z43qsH9z+fkZnSbhM8uEnYyElzopGta3mS0gAWVrp9HqFnhJwpWv5zZlm1WF4pRU7dP+cjyJvQbiXV5Dwwk6082Hi/RIGn1gr9RR8C0TYXoTxHrYCeHuYI3R5nNAtwDgS53janTkqkw2j6Ka5eswJghBVQIUBHIoUji5rOZ1EkWZ0Z+I4zAxxY6QBw0Ip2nsCwnqsUZOLlxPbj8P1OSKnCNp+6/cZ+sGG+dHuu/Bc+swfiO/svV/g/yv3L8MzXtDmmwRYPaFvGSkk1yPFkxyxycJc0PtdHAqAVQCgoUVQBaALKoEsoAtCBaFFCAeCoBc6UWxDIlCxC9WiWNzpQEtCAqBaUsEES9JmTtQg5UCFARyKFI4uazmdRJFmdHHcX6T8MjxEsc7TnjLOtd1Mj2tzAZS5zQQAQQvPLT4pNuUVZ68et1EIqMZtJEfEOkfCYZHxvYSWNY5zmQyPYGvaHNcXNBFEEarn0uH8KO/tDVf3GaXEeluBwrIR1liVgdCyFrpHOjqw4NaNG+nsPYVvFKKSXI8k5SnJyk7bD9d8GcMMUx75IiXNJjie8sLRbhI0C2UNbOlEHYrqzmiAfpCwXVCW5gxz42NJgkGd0gcWhmnjeQdu7tUFFybpnhI8McTK58UefqwJInskc+gaawjM7Q7gVoUKNwXTjBzRSSRukf1TmtkjETzM0uND4usxF8xsoCbo/0uwuNcW4frXUHHM6F7GeKQCM7hWbUabqhm/QQcBKQgEIBFQGZAGdBY5rwpRUxS9ShYmZUCIQQhWyUNLUsUJSpAVBFEtzgsNQg5UCFARyKFI4husps7iSUuDo8zPRXEYriXE2mabD4eU4UOyxNInbk1DZHjSiN23vquSmZx/gOMZiOIeCCZsQhwMZYyMEzwCMRyMje5p8do83XfuQGrFA7h2MZi4sHiJ8K/BwwMEbC7EQFlHK6N1EXVnbUnsogTcF4XOcJxbEPgfEcYJ3xYcjxwOreA4tG0jy/Ub2EIzN4/w2f+xeFsEOIzxTYV0jYoyZo2tbJmcG1o4aVfOkfIq5ljHQzuGBx0cOOxLcJPP1keKYG4otka2pGMFBwbWlC79ZAHUdF8e/FYqXEHhxwzMjWNnmYGYqXybaW1YYMvnEaNrnQUV/0V4SSLAOZLG+N3hGJOV7S00SKNHke1EGdgqQEAUligpLFBlQUZs3GsO14jMozkkADuBJ7uXt0WEtRjTqzZafI1dGZxHpbFG4MbG95O9FrQBvepv6llPWwXLiaw0U5cW6LkHH43DxszD3i/sXcNXjl7HE9Lkj7kv9tQXXWt5DXTfUbrVZsfcy8nJ2LEONY/yHtd/dcD9i0UovkzhxkuaJwbV4HIqWBVCi2gIol6TMsNQg5UCFARyKFIA+is5qzpMk60LOjqzjcd0kx0+Lnw3Do8PWHyCWTEl9Oe8EhjAz0bnsPdfNMpXwXT6SY4JoiYx0mJnw2JY63Fj4gCchBHbztClXpJ09xOHdxEMZCfBXYIRZmuN9f5eeni65VXrRkNPov0pnlxsuDxHg8hZEJRNhC4xUSG5HZiadre/JVcyPlZpYjjsjWyjK3rGyhjRRotOoJF70Cvnz1WSMZKluUqXy/4fbxeHYsk8bt7XHc+XPl27sk/tx5PiBtDDGU2CfGo03fa116mTfw8tu76nH2fCK+Nu/M2L5d+RJw/jD5JWMcG06ASGgbzE1Q12VwZ5zyRi64xv6meq0ePFhnOLdqe36V8uZC7imIL5cjYy2NxFHMHEVehur0UebO5T2JNR+dmi0mkjDF5jknNc1VL/ZPhOMGSWNoAyPiL9fKBBqr2rRd49Q55IpcnG/cxzaFYcM5SfxRlt9qqyvjeNyM66gz4t8TW2Ds8G717lnl1U476rg0l9e56NP4fiyeVbfxRk3VdO3AMTxiVkbXZ8O7NK1mZuYsAok3ry09S5yajJGClui7dWrrl8y4tDhyZXDbNVFunVviqrh/Ga3DMQ58eZzo3GzRivLQ9PPdezDJyjbafy5HzdVCOPJtjGS9pcyxKSWkA0SCASL37ua0atHnTOPZ0MePGbOGvOXUt6yq7C4369143o0+p7VrWuFGNxXg02HkzyPzA1TmgEHLycKFH+XevPmwOJ6MWeMxsfEWzPy34wBvxa1FC/Tp2hcq+TK0uaHxOJonzT6avbTn3d3dp1GLOXJE+HxbA4NdQNNFOaAR5R2Gx8VxPb3alVtHNOjquE8SBIYXZgQCx3Mg8jfP8R2hevDlvgzyZcdcUak+JYzy3Nb6SAvTRgRM4lETQlYT/AHglELBclCxIl6TMnahByoEKAjkUKUMVy9agIQT2rkHL47o3iG4mXE4LFCB04aJmvjEjS5opr235Lq+1ctcbR1fDiVndBsmHhbDiC3ERTOxAnc0Ozyv/AGhcy9jQ7arnqpt4DdxIMV0Eklw+KbLiQ/EYp8LpJOrysAhPiNawHsvX0dibeA3cTc6O9HvA58QYnNEEzxI2INoxvqnAOGhYeQ5UK53VGiN2Xn8MvECbMK0JbW7gC0FeSWkvP5t8O3vVH0o+I7dH6euPf2uxuC4QY2ytzg525Qa8ltGh9a4w6Ly4zV81S9ka6nxRZp4pba2u37vh+wR8MlY5jmSMBbE2Pxmkg0bJ39C5jpMkJRlCStR28V/6WXiGHJCUMkHTm5cGl/oceGS5pMszWtkNuplu7NCToj0uXdLbOlLnwEfENPtx78bbguHHgSu4U5r2Ohe1uSPIM7S69SSdCO1X0soyi8bSpVxVkXiGPJCcc8W90t3B1/pjZ+Cuf1tyN+MfE7Y6ZBqN+a5yaSUt3H+pp/kdYvEoY/L+F/CpLn3/AGLXFOGGRrAwsZlkD/J0JAI1A9K11GDzElHhTvkefR6zyZyeS5XHbz4/mW8DE9raeWk2fIblFeha41JRqVX7Kjz55wnO4Jpe7t/mWSV0ZAhSHFQMkYWPaHNO4KjSfBhSceKOO4n0djixDTH8WyRtXpTavMTm3Fa+3VeXJiSkqPXjytxdlWDhkULgW4nrXVkrJpRIq3E6V9nJaSwSSdGcc0W0ZWMwkrpXBzy2OgRRaCHDysxadCHtLdCSNL2JXlUG6vkenfXLmamFnyDKKGt3XjA3e58ageVr3eTFRpHj81uVsJJ3MfncdWmwX/GCqLhvo8UD7DsQQO45LVPmcyx07RWYHAAP8qtbGXfydLJuqvbW9Bsu48UcSqy/hOIytLQJTVgUTY+tUlHdRrYzJ2oQcqBCgI5FClZwWczpDcq4KVZZnAkA7f8AtPP1jf1ICNs7ydSKuv2Ug39J0QCdY7bMNdrif6rNgfYrZKASONUe79k/f294+v1LFCsmN63Q0NRPu+VGzp6im4UXAxLFDxGpZaF6tLFC5EsbRerU3F2gI+9Nw2jQ9vnfWlih7HDkbULyKWN4xFHoXWfNbqfXyHrVSJZz+P4/I+8vxbe4+N73L1LqkDFHGGtOa8zjs7MSB3uIvSidOe2lrz5mpVTPRhTV2gxHEC0DJHDy8Zxe8+7YaPYs5TlLqaRhFcyszHyuJBmGt34rBuO0NzbCt1nGCiqr/JpJuXGyUl51dV+29+Y1JXohlS4NHnnik+TJIp8uluB7Nu+x7B9S0tS5HCW1Ux5cHVfPn39q6VojSZHC2nNI1BLftXaZm4npUa1MydqEHKgQoCORQpXKyyHcRFwUqywuJJA7a+McLuuQGmyAYYXDZt8v2z/wUKRTnLW96/8AFd2CuXaPvXSi2cOSQjcSOYff/Md/RXXlsnmIQT0bbfrc531E0uljXUnmPoKMW/t+oK7InO+RKzHu5gH6ly8aOlkZZix7Tvp9YXDxvodLIiyJAdja4pmlojxGJawW4+rmVUmyN0ZknES7bQdn811to5TK804YMxND7fQnMtGRjOKPfoCWt7AdT6SiVCyhYAs7bqg43jnHy5xa26Gw7T396wlJyPRGKj8x3B3OfZPsH9bLhnaNFsuY05ulgCzp3aUoU0IXMyhriBrpprtfo3+5csoxoMbzb2kbguOnr/q05izRinY8ZSWns7PsRWuQdPgyo9pbeWz2Dn2V9S1jl48TKWOl8I7Bsfnb4p8pvdz9K23xMfLkeoRr0GJO1CDlQIUBHIoUrkrLJ0O4iFyzo6sa51aqkKWIx/Jvt/BaRx9zNz7FHMtDMLQDrUs6oFLFBah1QhkVJRG6fsSxtInPJNkkqFI5pA0WVC0Zc8pedfV3LmzuiBzgNSaCN0ErMDinE3SOyM0bz7TWuvdpsspSs2hGjlMZb5erDHAZhqW/19S4SO2zoD4kdDTbmoUkwU3im6q9fxK4lzOkGLxuWTytKHo3JRcUHwHwY/Qmyb30zaE3XeFSFqNzLDqDT2gaa16v69allo02P2skmtDtVf12qFH53h7SNswv0WF3FrqcST6M9MjX0Dwk7UIOVAhQEcihSuYHu8hpdW9EfeQs5tdTpJkMmDxXyYa9LmX/AKlFs6sjU+iPC+nnSziEHEJ4BiHMDHABtMIbbWnTQ9q4c6fwmiha4mB+vXEPpLvdZ+VTzJdx5cexNhOmfEHvDPDMl34zwxrRpepy6Jvl3LsiXm9Isef/AFKHc7lo57/s03yGyJQxPTXiDHlvhmaubQwtPoOXVTfIbERfr3xD6U73WflTexsRv9A+k2PxXEIYHTOkD+ttlMF5Y3u3obVe/JVTd8SOC6HsB4FivmT7zPzLvejnYxh4HivmHe+z8yb0NjEPBMX9GPvx/mU3ouwrSdHca42YD78f5ly5HaikMPRjF/Rz78f5lNxaRmcR6JcQc7xcMSACB8ZHXfpn5rluzpUjGd0B4mTYwxBO/wAZF+fuClFtFmHoHj27YV11v1kP57tVcA2mR43oJxFxpuFdX/Mi/OuaLuQzD9BOJAEeCHTQXJF4w1uqfft7lw4tnSkivP0B4oTfguuny4L9pda6SojkmTYfoLxMCjhnDlZfCee/7T+vtjiwpIlg6EcTsk4Z4306yE+iqfrem6m1l3o1IOiGPADXYcka2esjGnLTNvt/RTay70WsP0XxzXAugNWL8ePYa35Wv/ZFF2RyVHbxr6J4SdqEHKgQoCORQpc4L8v9371hl6GkDTWRocnxb9G/DMTO+efDZ5JCC93WSCyABsHUNANkBT+CThH0P/Nl/OgD4JOEfQ/82X86APgk4R9D/wA2X86APgk4R9D/AM2X86APgk4R9D/zZfzoC7wb9HXDcJOzEYfDZJWZsruskNZmlh0c4g6OO6A6tACAEAIAQAgBACAEAIAQAgBACAbJsfQVUGc7EvWecsNQg5UCFARyKFLnBfl/u/esMvQ0gaayNAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBANk2PoKqDOdiXrPOWGoQcqBCgI5FClzgvy/3fvWGXoaQNNZGhV4ljmwROkfsNgN3E6NaBzJOi4yZFCLkzXBhlmmoR/wCe/wBDGj6Tk4eOQQEyyyPjZEHjymkg28gUNOxeZatvGpbeLdJX29z3Pw5LNKDn8MUm5V39r/2LF0pbUeePITLJFKHOHxTmNzON14wr0ItWuFquLT9qViXhsrltlfwqSpf1JuvoaXBeInEMMnVljCT1ZcfGe3z8teKDy3W2HK8i3VS6e/ueXVadYJbN1vr7PtfU0FseYhxuI6uN8lF2VrnUNzlF0FzOW2Ll2O8UPMmoXVujn+H9Ky7OZYg0Ng68GOQSDLsGHQZX93p2XkhrLvcum7g7/jPp5vDNu1Y5XctvFVx7rnaH4bpTo/r4HQkQ9e0Zg/PHtyAp2o0KsdXz3xrhfe0cz8N5eVNSuW18Kp/t7lng/HXSydVLAYXlgkYC4PDmE1dgCjqNF3h1DnLbKNOrXyMtToo4ob4T3K6fCqZtL0ngBAZOG4wXYqTDviyZGZw8vBzNsAGq058+SwjmbyvG1VcT2T0qWnjmjK7dVXJlTC9K2PM7shEcLA8PvWRpsWGkCgSNNde5ZR1kXudcErvub5PDJwWNX8UnVdvr+pNwfjrpZeqlgMLzGJWAuDw6MmrsAUddl3h1DnLbKNOrXyM9Tolih5kJ7ldPhVP+dTbXpPACAyuO8XdhzH8Vna94YXZg3KSRl0ok3r7FhmzPHXC03R7NJpVqN3xU0rqrs1VueMEAIAQDZNj6CqgznYl6zzlhqEHKgQoCORQpc4L8v9371hl6GkDTWRoZnGeDjEGMmR7DG4ubkryuR1B1HL0lY5sPmVxarsevTap4FJbU93B32MfD9GZmQx5Zm9dHK+RhdZj8awW7A63Z77XmjpZxgqlxTtdj2z8RxTySuPwSik658Ovbh+gfqo5wYJXMeTPLNNuAc7ctM9FDsT0jaW53xbf1XQfacYt+Wmqiox+jvibPAsJLDH1Urw8NNRu1zFnyQ8VVgdn/AH9OCEoR2yd1y+XueHV5ceWe+Cq+a6X7GktjylbiOGMsL4w4tLmOaHDcWKtcZI74OKdWa4Mix5IzaundHN4Loq/xxIYow7DmCoQacbsSvurcKXijpJcVKlarh+rPqZfEofC4W2pbvi6ey9iSPo1LJn8JlYT1HUM6tpFNu87r3dYC6WlnK/MfSlRzLxDHCvJi/wCrc7/Rexb4PwiZs3XYiRjnNiELAwEDLdlzr+VoFpiwzU982nwpUY6nVYpY/LwxaTe5339vY3l6j5wIDBx/ADNiJXl+VkkDYvFPj6OzHcVRGi8uTTuc5Nvg1XufRw61YsMYpW4y3ceXKinH0TdmmDp3OjfC2Jt1m0GmYAAU07Us1o3ck5cGq/ny6G8vFI1BqCUlK3/5x69S5wfg8zZ+uxEjHObEIWBgIGUG8zr+Vp9a7xYJqe+bT4UqMNTq8UsXlYYtJy3O+/ZexvL1nzgQGV0h4a7EMY1haC2WOQ5r2bdgUN9VhnxPIkl0aZ7NFqI4JSclzi1+Zqrc8YIAQAgGybH0FVBnOxL1nnLDUIOVAhQEcihS5wX5f7v3rDL0NIGmsjQwOlgAETyydwa919QSHC2nehdHbcboDCERF1HxWy43bhYJsB4o67DmgNbhvAM8LHPxGMa4hpOaQscDlykZdcvbVnYaoDoMHhxHGyMEkMa1oLjbjlFWTzOiAmQEeIiD2OYbpwLTRo6itDyKAyG9G2g2MRidQ0Edb8lpBy7WLI5a7jmgEi6NNBH/AInFEA3RmNHUkg0NjaA1sHB1cbWZnOytAzPNuNc3HmUBMgBAcfxAFskj3RY0NzuNxPbkcPONU4DxTvsKo0QEBWw9kBwZxR2ZoIuQAAFw13AFgV20SdNCgNThvAWvb1nW4xhJIc2SQtcQwlgzADY1Y12PegOjY2gBZNACzue8oByAwOksDnSROazEOytls4d7WkW6LQh3lE1yOgDkBiiMBrgMPxGyMwtxNkW5hs7Ott67Z9eQQHRN4C0Fh66e2VvJZdTi7xyRZ3Irs9CAt8L4eIGFgkkeLBuR2YigBQPZogLiAbJsfQVUGc7EvWecsNQg5UCFARyKFLnBfl/u/esMvQ0gaayNAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBANk2PoKqDOdiXrPOWGoQcqBCgI5FCnP9Ien2H4UWeERzP63Nl6oMNZKu8zm+eNu9YZehpAx/h74f8AR8X7kX8VZGgfD3w/6Pi/ci/ioA+Hvh/0fF+5F/FQB8PfD/o+L9yL+KgD4e+H/R8X7kX8VAHw98P+j4v3Iv4qAPh74f8AR8X7kX8VAHw98P8Ao+L9yL+KgJ8D+nHASysibBigXvYwEsiq3ENF1Jtqo3SsHoo4g3sP1fisPUR7HflsbiOJNY0uIcQN6r27p6iPYvlsx+O9OcHhAOtktxAIYynPo7EtvQd5VjnUujHlMysN+lTAPIB61gPNzW0PTTiV35i7DymdZguKxSsEkbg5rhbXNIII7iCuPUR7MeWyti+kEcbywteSK2ArX1r2YcTyw3o8uXPHHLayH9aIvMk9jfzLX0k+6M/Vw7MP1oi8yT2N/MnpJ90PVw7MP1oi8yT2N/MnpJ90PVw7MP1oi8yT2N/MnpJ90PVw7MP1oi8yT2N/MnpJ90PVw7MP1oi8yT2N/MnpJ90PVw7MP1oi8yT2N/MnpJ90PVw7MD0miOmR+umzefrT0sl1Q9XB9GQRLo6LDUIOVAhQEcihTxj9P++E/wAT/trHL0NIHkSxNDV4L0exGLDzBHmDKzGwKsOcBr/cP1dqAsv6HY1ot0BaPF1LmjyiGgDXU2RpyQEGP6M4qCIyyxFjAWgkubu7bQG+z2oDIQAgBACA0ujX/ncN/wDIw/8A9jVzL+llXM+tQF82z0lXjGM6qB7tLqm3tmOgvuUs6irdHlTOERnM6Zole42SdNeZGug39i2Un0Ixk/RyN7fEGQ1pzHr/ABXSk1zKa/6KcXJHiJcG+wA0vDeTS0gGu2831BTLVWQ63jp+PPob9i+34f8AcL6/qfE1v3z+hnr2nlJ2YN5GYNsH0LhzinTOljk1aQ4YGTzfrH4qeZHuXy5diKaFzdHCv67l0pJ8jlxa5ka6ICAEA5m49IUfIq5nSxrxH0SdqEHKgQoCORQp4x+n/fCf4n/bWOXoaQPIliaGxwPisMLXiXDdcXVlPWFmXQgjQXzBsEHRAXv7cwXLAPrxa/8AFyXpV/J7AK7K9QAwcZiMz3Foc1hc7KwuLsrb0bZ3oAC+5AV0AIAQAgJ8C4iVhBIIewgjQggjUIGeqYbpVi4x4uJk/eOf/XazeKD5ozWSS6lp3E8djwGWXhu7qDGd5cW0L9GtbLKWHGbwzZFyNF2CDT+1NtobbVpv2rJKlRvd8S05wa0DU8ia1va6Gh5qsiNLoZweTw6TFOGVrYmxNvKXFx8Y3zbQrersLLI+FHdOPM1uOD493ob9i+94d9wvr+p8PW/fP6FBe48pZinYAA5ljSyHEE761sd1m4vmmdqUapoHTx8oz75vbRNsu/8AgOUe3+QfiGH5B2ryya1vS9kUWuocovp/kZLIwimsym7vMTprpr6vYqlK+LI3GuCIV2cggHR7j0hR8irmdLGvEfRJ2oQcqBCgI5FCnjH6f98J/if9tY5ehpA8iWJoaXC3gNdbq1bvJk5jllN/cgL78TbaMgIII0maDTuR+L7NEAgxGjh1ouiLM2l0TdCPUa/dzQFV3GNCA143/wCICLJJJ8nUbezfVAIOLDsk7vjBQo+Lpk5fWgKOLmD3ZgCNBduzEkaXdBAQICXDHx2/3m/ahHyO3wj2uNOdlHbROvq29KjuuBnFJvidxwvjMfVguJEcYa1xFFra0FBuuXUbgLCVnpVdBOLY+Boa5pLw6UsDmAuBcNco7ezTtWVNmikkOxHEwwBjj1TnAhhLQ4tJ2eR2AoouXIOaiz0bhMDIoGMiIc0NFOBvNepeTzJJJvvWD4Pid7r4mXxo3MfQ37F+g8O/+dfX9T4mt++f0KK9x5SZh03/AOr+S4Z0hS/v/wCr+SUWwzd/b8r+SCwz9/Z8r+SULIpDr/O10jljVSDmbj0hR8irmdLGvEfRJ2oQcqBCgIpFCnjP6f8AfCejE/7axy9DTGeRLE0LmCha7yu06nMQKqtGAnWz7EBaODjrQ3vpUgI0OtuFch7UBkoAQAgBACAkw/lt/vN+1CPkej9DY45JJGPa0ydWTEZGtdCzKbkkla57bDWA9vM0apDJFqLh8WIeWyZI5g+OIDDRWyQPflbPlsNyAuZ5FWCDXaKP4Nx9sDBFLE2XqZJHxUfFznSyeYFuP7w7FjLFbtHcclKmZ2IxDpZHSONucbP4DsA2WiVKkcOVnXdCOkZie3DyG43OAafMcf8A8kn71hmxblaNcWSnTOx4wPjj6G/Yvq+HfcL6/qfP1v3z+hSXuPKSNaP6v7lzZaEcP61+9VBoYqQEAIAQDmbj0hR8irmdLGvEfRJ2oQcqAKAieoU8d/T3A5xwmVrnaYi6BPzfYscvQ0geS+BS/Nv90/gsqZoHgUvzb/dP4JTAeBS/Nv8AdP4JTAeBS/Nv90/glMB4FL82/wB0/glMB4FL82/3T+CUwHgUvzb/AHT+CUwHgUvzb/dP4JTA6LBy5h8W/cfJP4JTI+R0mEdLG9r2CRrmm2uaHNcPQW0RpexSmYmlieM4lxJALMwpxjjLXOG1OkNyPFec4pTFlFsbvMd7pSmCxCXj5DvdKUwa3C8O+SWNrWutz2AaHmd/QN/UuZcEyxVs9W4rrKT3N+xe3w/hgX1/U8ut+9f0KeU9hXtPKGU9iAMp7EAZT2FAGU9hQBlPYUAZT2FAOjabGh3CPkVczpYwvEfRJmoQcqAQDSFCkTmoCMtKATIoAyKgMiAMiAMiAMiAMiAMiAMiAMiAMiAMiAMiAOrUAdWgDq0AdWgDq0AdWgDq0AdWgHNYqCVrUBIFSCoAQCIBCFCiZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAZUAuVCC0qBUAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEB//2Q==" alt="" class="ex-1">
+                    <span class="article">Cabinet Médical — Clinique Horizon</span>
+                    <p class="paragraph">
+                        Création complète d'un site vitrine sous architecture JAMstack (HTML5/CSS3 optimisé). Résultat : un chargement instantané et une hausse de 30% des prises de rendez-vous en ligne.
+                    </p>
+                    <button type="button">Devis</button>
+                </article>
+
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrsT85ViDCnhvFYkQBgcLjhGpOlpa_QcOh7eCwLWryew&s" alt="" class="ex-2">
+                    <span class="article">Portfolio d'Art — Studio Lumina</span>
+                    <p class="paragraph">
+                        Conception d'une galerie d'images fluide et adaptative pour une photographe. Focus sur le SEO local, permettant à l'artiste de se positionner en première page sur ses mots-clés cibles.
+                    </p>
+                    <button type="button">Devis</button>
+                </article>
+
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhxVtvd9aHBVe1VDnrxlAdcsPouq6E8tBuWhXcTWVzg&s=10" alt="" class="ex-3">
+                    <span class="article">Cabinet d'Avocats — Mwamba & Associés</span>
+                    <p class="paragraph">
+                        Refonte d'un site vitrine institutionnel pour améliorer la crédibilité en ligne. Structure sémantique HTML stricte et accessible, garantissant une navigation irréprochable sur mobile.
+                    </p>
+                    <button type="button">Devis</button>
+                </article>
+
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRROw9sNIoDhZL_YQTKD7Sbv5wwLq5Kl6lSOL2ma3HDE7hqT507o_aUqRE&s=10" alt="" class="ex-4">
+                    <span class="article">Landing Page — Application Mobile</span>
+                    <p class="paragraph">
+                        Page de capture à fort taux de conversion pour le lancement d'une app à Kinshasa. Intégration d'animations CSS fluides pour maximiser les téléchargements des utilisateurs.
+                    </p>
+                    <button type="button">Devis</button>
+                </article>
+
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBpv3hLuTyRyqayZv1SUrytgzeu06aGdueHl-pheItLQ&s=10" alt="" class="ex-5">
+                    <span class="article">Site d'Artisan — Menuiserie Élite</span>
+                    <p class="paragraph">
+                        Développement d'un site vitrine avec un estimateur de devis intégré. L'expérience utilisateur (UX) a été simplifiée pour permettre aux clients d'obtenir une réponse claire en moins de 3 clics.
+                    </p>
+                    <button type="button">Devis</button>
+                </article>
+
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4i0YYAza5aOAyQFeTNW5fG-Tqq-l9wayDYa_2TsfatBqg7Vd6jlMTbSU&s=10" alt="" class="ex-6">
+                    <span class="article">Agence Événementielle — Prestige Corporate</span>
+                    <p class="paragraph">
+                        ite vitrine dynamique mettant en avant des vidéos de réalisations en arrière-plan. Optimisation du poids des médias pour garantir d'excellentes performances de vitesse sur Google PageSpeed.
+                    </p>
+                    <button type="button">Devis</button>
+                </article>
+            </div>
+         </section>
+
+      </main>
+
+      <!-- Footer -->
+          <footer>
+            <h2>Basé à Kinshasa, disponible partout dans le monde</h2>
+            <button type="button">Contactez-moi</button>
+
+            <!-- menu -->
+                <ul class="links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="realisation.html">Réalisations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="menu">
+                    <li><a href="tel:+243844583063">+243 844 583 063</a></li>
+                    <li><a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                </ul>
+
+            <span class="footer">© 2026 Stonnegams. Tous droits réservés.</span>
+          </footer>
+
+</body>
+</html>
