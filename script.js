@@ -1,58 +1,7 @@
-// =====================================================
-// STONNEGAMS — NAVIGATION
-// =====================================================
-
-// Tous les boutons "Contactez-moi"
-const contactButtons = document.querySelectorAll("button");
-
-contactButtons.forEach((button) => {
-    if (button.textContent.trim() === "Contactez-moi") {
-        button.addEventListener("click", () => {
-            window.location.href = "contact.html#formular";
-        });
-    }
-});
-
-// =====================================================
-// BOUTONS DEVIS
-// =====================================================
-
-const allButtons = document.querySelectorAll("button");
-
-allButtons.forEach((button) => {
-    if (button.textContent.trim() === "Devis") {
-        button.addEventListener("click", () => {
-
-            // Si nous sommes déjà sur index.html
-            if (
-                window.location.pathname.endsWith("index.html") ||
-                window.location.pathname === "/" ||
-                window.location.pathname === ""
-            ) {
-                const tarifs = document.getElementById("tarifs");
-
-                if (tarifs) {
-                    tarifs.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-                }
-            } 
-            
-            // Si le bouton se trouve sur une autre page
-            else {
-                window.location.href = "index.html#tarifs";
-            }
-        });
-    }
-});
-
-
 "use strict";
 
 /* =====================================================
-   STONNEGAMS
-   JavaScript principal
+   STONNEGAMS — JAVASCRIPT PRINCIPAL
    ===================================================== */
 
 
@@ -60,13 +9,11 @@ allButtons.forEach((button) => {
    1. BOUTONS "CONTACTEZ-MOI"
    ===================================================== */
 
-const buttons = document.querySelectorAll("button");
+const contactButtons = document.querySelectorAll("button");
 
-buttons.forEach((button) => {
+contactButtons.forEach((button) => {
 
-    const text = button.textContent.trim();
-
-    if (text === "Contactez-moi") {
+    if (button.textContent.trim() === "Contactez-moi") {
 
         button.addEventListener("click", () => {
 
@@ -83,21 +30,17 @@ buttons.forEach((button) => {
    2. BOUTONS "DEVIS"
    ===================================================== */
 
-buttons.forEach((button) => {
+const devisButtons = document.querySelectorAll("button");
 
-    const text = button.textContent.trim();
+devisButtons.forEach((button) => {
 
-    if (text === "Devis") {
+    if (button.textContent.trim() === "Devis") {
 
         button.addEventListener("click", () => {
 
             const tarifs = document.getElementById("tarifs");
 
-            /*
-             * Si la section tarifs existe sur la page actuelle,
-             * on effectue un défilement fluide.
-             */
-
+            // Si la section tarifs existe sur la page actuelle
             if (tarifs) {
 
                 tarifs.scrollIntoView({
@@ -107,11 +50,7 @@ buttons.forEach((button) => {
 
             }
 
-            /*
-             * Si la section tarifs n'existe pas,
-             * on retourne sur la page d'accueil.
-             */
-
+            // Sinon, aller sur la page d'accueil
             else {
 
                 window.location.href = "index.html#tarifs";
@@ -126,7 +65,7 @@ buttons.forEach((button) => {
 
 
 /* =====================================================
-   3. RETOUR EN HAUT
+   3. BOUTON RETOUR EN HAUT
    ===================================================== */
 
 const backToTop = document.getElementById("backToTop");
@@ -161,7 +100,7 @@ if (backToTop) {
 
 
 /* =====================================================
-   4. GESTION DES ANCRES AU CHARGEMENT
+   4. GESTION DES ANCRES
    ===================================================== */
 
 window.addEventListener("load", () => {
@@ -188,3 +127,16 @@ window.addEventListener("load", () => {
     }
 
 });
+
+
+/* =====================================================
+   5. MESSAGE APRÈS ENVOI DU FORMULAIRE
+   ===================================================== */
+
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("sent") === "true") {
+
+    alert("Merci ! Votre demande a bien été envoyée à Stonnegams.");
+
+}
