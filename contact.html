@@ -7,87 +7,160 @@
     <title>Contactez Stonnegams | Demandez votre Devis Site Web Gratuit</title>
     <meta name="description" content="Prêt à lancer votre site vitrine ? Contactez Stonnegams pour discuter de votre projet web et obtenir un devis gratuit personnalisé sous 48h.">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <!--body-->
 <body>
     
     <!-- header -->
      <header>
 
-        <!-- image :(prend toute la zone header) -->
-         <div class="banner">
-            <img src="https://images.pexels.com/photos/34140/pexels-photo.jpg" alt="" class="banner-img-3">
-         </div>
-        <div class="nav">
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html">
-                        <span class="stonnegams" id="stonnegams">Stonnegams</span>
-                    </a>
-                </div>
+        <!-- (Banner) -->
+         <div class="banner" role="banner">
+
+            <!-- IMAGE : (prend toute la zone banner)-->
+            <div class="banner"><img src="https://images.pexels.com/photos/34140/pexels-photo.jpg" alt="" class="banner-img-3"></div>
+
+            <div class="navbar" role="navbar">
+              <nav id="navigation">
+
+                <div class="logo"><a href="index.html"><span class="stonnegams" id="stonnegams">Stonnegams</span></a></div>
+
                 <!-- menu -->
                 <ul class="links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="realisation.html">Réalisations</a></li>
+                    <li><a href="index.html">Accueil</a></li><li><a href="realisation.html">Réalisations</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
-                <button type="button">Contactez-moi</button>
-            </nav>
-        </div>
 
-        <h1 class="title">Donnons vie à votre futur site vitrine.</h1>
-        <p class="paragraph">Offrez à votre entreprise la vitrine web qu'elle mérite.</p>
+                <div class="nav-medias-icon-links">
+                    <a href="https://linkedin.com/in/stonne-gams-5343bb3b3" target="_blank"><img src="https://thesvg.org/icons/linkedin/default.svg" alt="Contactez-moi et suivez-noi sur Linkedin" class="medias-svg-ico"></a>
+                    <a href="#" target="_blank"><img src="https://thesvg.org/icons/instagram/default.svg" alt="Restez informé et ne loupez rien en me suivant sur Instagram" class="medias-svg-ico"></a>
+                    <a href="#" target="_blank"><img src="https://thesvg.org/icons/tiktok-badge/default.svg" alt="Contactez-moi et suivez mes anventure developpeur sur Tiktok" class="medias-svg-ico"></a>
+                </div>
+
+             </nav>
+
+         </div>
+
+         <!-- Titres principales -->
+             <div class="titles">
+                <h1 class="title">Parlez-moi de votre projet et obtenez une réponse</h1><p class="paragraph">Offrez à votre entreprise la vitrine web qu'elle mérite.</p>
+                <button type="button" id="devis-btn">Demander un devis</button>
+             </div>
+
+         </div>
+         <!-- (Banner) -->
+         
      </header>
 
      <!-- main -->
      <main class="content">
-     <!-- Formular -->
+
      <section class="formular" id="formular">
-    <h2 class="sub">Un projet en tête ? Parlons-en</h2>
 
-    <form action="https://formspree.io/f/mbgjqowb" method="POST" class="contact-form">
+       <!-- Formular -->
+        <div class="form-fromular-content">
 
-        <h3 class="h3">Demander un devis gratuit</h3>
+          <h2 class="sub">Un projet en tête ? Parlons-en</h2>
 
-        <!-- Redirection après envoi -->
-        <input type="hidden" name="_next" 
-            value="https://stonnegams-coder.github.io/mon-site/contact.html#formular">
-            <input type="text" name="prenom" id="first-name" placeholder="Prénom" minlength="3" required>
-            <input type="text" name="nom" id="name" placeholder="Nom" minlength="3" required>
-            <input type="email" name="email" id="email" placeholder="Adresse e-mail" required>
-            <input type="tel" name="telephone" id="number" placeholder="Téléphone" minlength="9" maxlength="15" required>
+          <form action="https://formspree.io/f/mbgjqowb" method="POST" class="contact-form">
 
-        <textarea name="message" id="message" placeholder="Décrivez votre projet..." minlength="7" maxlength="500" required></textarea>
-        <button type="submit">Envoyer ma demande</button>
-    </form>
-</section>
+             <h3 class="h3">Demandez votre devis gratuit</h3>
 
-     <!-- Plans -->
-      <section class="plans">
-        <h3 class="h3">Discutons de votre projet autour d'un café à Kinshasa</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.881486365004!2d15.318265274667!3d-4.4019740469688795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a39af17a92d31%3A0x468893ba38769c10!2sStonnegams!5e1!3m2!1sfr!2scd!4v1788960240226!5m2!1sfr!2scd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      </section>
+             <!-- Redirection après envoi -->
+             <input type="hidden" name="_next" 
+             value="https://stonnegams-coder.github.io/mon-site/contact.html#formular">
+             <input type="text" name="prenom" id="first-name" placeholder="Prénom" minlength="3" required>
+             <input type="text" name="nom" id="name" placeholder="Nom" minlength="3" required>
+             <input type="email" name="email" id="email" placeholder="Adresse e-mail" required>
+             <input type="tel" name="telephone" id="number" placeholder="Téléphone" minlength="9" maxlength="15" required>
+
+             <textarea name="message" id="message" placeholder="Décrivez votre projet..." minlength="7" maxlength="500" required></textarea>
+             <button type="submit">Envoyer ma demande</button>
+          </form>
+
+        </div>
+        <!-- Formular -->
+
+        <!-- Plans -->
+        <div class="local-plan-form">
+
+          <h3 class="h3">Parlons de votre projet à Kinshasa</h3>
+          <p class="paragraph">
+               Vous souhaitez discuter de votre projet ? Retrouvez Stonnegams à Kinshasa ou contactez-nous directement en ligne.
+          </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.881486365004!2d15.
+           318265274667!3d-4.4019740469688795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+           1!3m3!1m2!1s0x1a6a39af17a92d31%3A0x468893ba38769c10!2sStonnegams!5e1!3m2!1sfr!2scd!4v1788960240226!5m2!1sfr!2scd"
+           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+
+        </div>
+        <!-- Plans -->
+
+     </section>
+
     </main>
 
      <!-- Footer -->
           <footer>
-            <h2>Basé à Kinshasa, disponible partout dans le monde</h2>
-            <button type="button">Contactez-moi</button>
 
-            <!-- menu -->
-                <ul class="links">
-                    <li><a href="index.html" class="active">Accueil</a></li>
+            <div class="foot-logo-footer">
+                <div class="logo"><span class="stonnegams" id="stonnegams">Stonnegams</span></div>
+                <p>Vivez une expérience digital moderne</p>
+
+                <div class="foot-medias-icon-links">
+                    <a href="https://linkedin.com/in/stonne-gams-5343bb3b3" target="_blank"><img src="https://thesvg.org/icons/linkedin/default.svg" alt="Contactez-moi et suivez-noi sur Linkedin" class="medias-svg-ico"></a>
+                    <a href="#" target="_blank"><img src="https://thesvg.org/icons/instagram/default.svg" alt="Restez informé et ne loupez rien en me suivant sur Instagram" class="medias-svg-ico"></a>
+                    <a href="#" target="_blank"><img src="https://thesvg.org/icons/tiktok-badge/default.svg" alt="Contactez-moi et suivez mes anventure developpeur sur Tiktok" class="medias-svg-ico"></a>
+                </div>
+            </div>
+            
+            <!-- MENU -->
+                <div class="foot-menu-links">
+                  <ul class="links">
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="realisation.html">Réalisations</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                  </ul>
+                </div>
 
-                <ul class="menu">
+                <!-- CONTACT INFOS -->
+                 <div class="foot-contact-infos">
+                  <ul class="menu">
                     <li><a href="tel:+243844583063">+243 844 583 063</a></li>
                     <li><a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a></li>
                     <li><a href="#">Linkedin</a></li>
-                </ul>
+                  </ul>
+                 </div>
 
-            <span class="footer">© 2026 Stonnegams. Tous droits réservés.</span>
+                 <!-- ADDRESS -->
+                <div class="foot-infos-address">
+                    <address>
+                      <p>
+                        Lemba, Salongo<br>
+                        Kinshasa<br>
+                        République démocratique du Congo
+                     </p>
+                    </address>
+                </div>
+
+                <!-- MENTION -->
+            <div class="foot-footer-mention">
+                <span class="footer">© 2026 Stonnegams. Tous droits réservés.</span> <span>Stonnegams</span>
+            </div>
           </footer>
           <script src="script.js"></script>
      </body>
