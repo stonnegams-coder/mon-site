@@ -137,7 +137,7 @@ header > .banner > .banner::after {
    ========================================================= */
 
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 18px;
     left: 50%;
     transform: translateX(-50%);
@@ -1500,7 +1500,7 @@ footer {
    18. RESPONSIVE — MOBILE
    ========================================================= */
 
-@media (max-width: 651px) {
+@media (max-width: 610px) {
 
     body {
         font-size: 14px;
@@ -1519,12 +1519,12 @@ footer {
     .navbar {
         top: 10px;
 
-        width: 94%;
+        width: 96%;
     }
 
 
     #navigation {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
 
         justify-content: center;
 
@@ -1535,7 +1535,7 @@ footer {
 
 
     .logo {
-        width: 100%;
+        width: 10%;
 
         text-align: center;
     }
@@ -1544,9 +1544,9 @@ footer {
     .links {
         width: 100%;
 
-        gap: 18px;
+        gap: 10px;
 
-        justify-content: center;
+        justify-content: flex-end;
     }
 
 
@@ -1556,7 +1556,14 @@ footer {
 
 
     #contact-btn {
-        width: 100%;
+        width: 59%;
+        display: none;
+        
+        
+    }
+
+    .nav-medias-icon-links {
+        display: none;
     }
 
 
@@ -1701,6 +1708,7 @@ footer {
     .about-image,
     .about-slide {
         min-height: 300px;
+        min-width: 300px;
     }
 
 
@@ -1734,7 +1742,7 @@ footer {
 
 
     .form-fromular-content .sub {
-        font-size: 26px;
+        font-size: 25px;
     }
 
 
@@ -1754,12 +1762,12 @@ footer {
 
 
     .pub-tl-red {
-        font-size: 34px;
+        font-size: 26px;
     }
 
 
     .pub-text-infos p {
-        font-size: 15px;
+        font-size: 13px;
     }
 
 
