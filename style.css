@@ -1500,11 +1500,29 @@ footer {
    18. RESPONSIVE — MOBILE
    ========================================================= */
 
-@media (max-width: 610px) {
+@media (max-width: 768px) {
+    /*new*/
+    .foot-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .foot-col {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1;
+        min-width: 0;
+    }
+    /*new*/
 
     body {
         font-size: 14px;
     }
+
+}
 
 
     /* =====================================================
@@ -1792,12 +1810,37 @@ footer {
 
         flex-direction: column;
 
-        align-items: center;
+        align-items: start;
+
+        justify-content: start;
     }
 
+    /* Les deux colonnes côte à côte */
+    .foot-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;   /* les deux colonnes démarrent au même niveau, en haut */
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Chaque colonne empile ses blocs */
+.foot-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 0;              /* évite que l'email déborde */
+}
+
+/* Pour éviter que l'email long casse la mise en page */
+.foot-contact-infos a {
+    overflow-wrap: anywhere;
+}
+/* Les deux colonnes côte à côte */
 
     .foot-menu-links .links {
-        align-items: center;
+        align-items: start;
     }
 
 
@@ -1814,7 +1857,6 @@ footer {
         align-items: center;
     }
 
-}
 
 
 /* =========================================================
