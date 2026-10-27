@@ -1,167 +1,184 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <!--head-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactez Stonnegams | Demandez votre Devis Site Web Gratuit</title>
-    <meta name="description" content="Prêt à lancer votre site vitrine ? Contactez Stonnegams pour discuter de votre projet web et obtenir un devis gratuit personnalisé sous 48h.">
+
+    <meta name="description" content="Contactez le Collège Horizon et inscrivez votre enfant : formulaire en ligne, adresse à Lemba, téléphone, e-mail, horaires du secrétariat et étapes d'inscription.">
+    <meta name="keywords" content="contact Collège Horizon, inscription école Kinshasa, inscrire mon enfant, procédure d'inscription, secrétariat, adresse école Lemba, téléphone école, Collège Horizon">
+    <title>Contact et inscriptions | Collège Horizon</title>
+
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/chapeau-de-remise-de-diplome.png" type="image/x-icon">
 </head>
+<body>  
+    <div class="container">
 
-<!--body-->
-<body>
-    
-    <!-- header -->
-     <header>
-
-        <!-- (Banner) -->
-         <div class="banner" role="banner">
-
-            <!-- IMAGE : (prend toute la zone banner)-->
-            <div class="banner"><img src="https://images.pexels.com/photos/34140/pexels-photo.jpg" alt="" class="banner-img-3"></div>
-
-            <div class="navbar" role="navbar">
-              <nav id="navigation">
-
-                <div class="logo"><a href="index.html"><span class="stonnegams" id="stonnegams">Stonnegams</span></a></div>
-
-                <!-- menu -->
-                <ul class="links">
-                    <li><a href="index.html">Accueil</a></li><li><a href="realisation.html">Réalisations</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-
-                <div class="nav-medias-icon-links">
-                    <a href="https://linkedin.com/in/stonne-gams-5343bb3b3" target="_blank"><img src="https://thesvg.org/icons/linkedin/default.svg" alt="Contactez-moi et suivez-noi sur Linkedin" class="medias-svg-ico"></a>
-                    <a href="#" target="_blank"><img src="https://thesvg.org/icons/instagram/default.svg" alt="Restez informé et ne loupez rien en me suivant sur Instagram" class="medias-svg-ico"></a>
-                    <a href="#" target="_blank"><img src="https://thesvg.org/icons/tiktok-badge/default.svg" alt="Contactez-moi et suivez mes anventure developpeur sur Tiktok" class="medias-svg-ico"></a>
+      <main>
+        <!-- Header -->
+         <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                    <span>Collège <strong>Horizon</strong></span>
                 </div>
 
-             </nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                     <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                      <li><a href="contact.html" class="active" aria-label="Page de contact">Contact</a></li>
+                </ul>
+            </nav>
 
-         </div>
+            <div class="banner">
+                <!-- Image : (Background du banner) -->
+                 <img src="images/contact-banner.jpg" alt="Des éléves dans une salle de classe" class="banner-img">
 
-         <!-- Titres principales -->
-             <div class="titles">
-                <h1 class="title">Parlez-moi de votre projet et obtenez une réponse</h1><p class="paragraph">Offrez à votre entreprise la vitrine web qu'elle mérite.</p>
-                <button type="button" id="devis-btn">Demander un devis</button>
-             </div>
+                 <div class="banner-contenus">
+                    <h1>Contact et <strong>Inscriptions</strong></h1>
+                    <p>Nous répondons à toutes vos questions sous 48 heures.</p>
+                 </div>
+            </div>
+         </header>
 
-         </div>
-         <!-- (Banner) -->
-         
-     </header>
+         <!-- Section contact 1 -->
+          <section class="contact-1-section">
+            <div class="formular-form">
+                <h2>Écrivez-nous</h2>
+                <form action="" method="post">
+                    <label for="name" aria-label="Nom du parent">Nom et prénom :</label>
+                    <input type="text" name="name" id="name" placeholder="Nom et prénom du parent" required>
 
-     <!-- main -->
-     <main class="content">
+                    <label for="email" aria-label="Adresse e-mail">E-mail :</label>
+                    <input type="email" name="email" id="email" placeholder="exemple@gmail.com" required>
 
-     <section class="formular" id="formular">
+                    <label for="number" aria-label="Téléphone">Téléphone :</label>
+                    <input type="tel" name="number" id="number" placeholder="+243..." required>
 
-       <!-- Formular -->
-        <div class="form-fromular-content">
+                    <label for="message" aria-label="Message">Message :</label>
+                    <textarea name="message" id="message" minlength="1" maxlength="1000" placeholder="Message"></textarea>
 
-          <h2 class="sub">Un projet en tête ? Parlons-en</h2>
+                    <button type="submit" id="submite">S'inscrire</button>
+                </form>
+            </div>
 
-          <form action="https://formspree.io/f/mbgjqowb" method="POST" class="contact-form">
+            <div class="coordonnee-container">
+                <h2>Nos coordonnées</h2>
 
-             <h3 class="h3">Demandez votre devis gratuit</h3>
+                <div class="coo-form">
+                    <img src="images/emplacement.png" alt="Icone de localisation" class="coo-img">
+                    <h3>Adresse</h3>
+                    <p>1234 Candy avenue, Kinshasa/ Lemba RDC</p>
+                </div>
 
-             <!-- Redirection après envoi -->
-             <input type="hidden" name="_next" 
-             value="https://stonnegams-coder.github.io/mon-site/contact.html#formular">
-             <input type="text" name="prenom" id="first-name" placeholder="Prénom" minlength="3" required>
-             <input type="text" name="nom" id="name" placeholder="Nom" minlength="3" required>
-             <input type="email" name="email" id="email" placeholder="Adresse e-mail" required>
-             <input type="tel" name="telephone" id="number" placeholder="Téléphone" minlength="9" maxlength="15" required>
+                <div class="coo-form">
+                    <img src="images/telephoner.png" alt="Icone de téléphone" class="coo-img">
+                    <h3>Téléphone</h3>
+                    <a href="tel:+243844583063">+243 84 45 83 063</a>
+                </div>
 
-             <textarea name="message" id="message" placeholder="Décrivez votre projet..." minlength="7" maxlength="500" required></textarea>
-             <button type="submit">Envoyer ma demande</button>
-          </form>
+                <div class="coo-form">
+                    <img src="images/gmail.png" alt="Icone d'e-mail" class="coo-img">
+                    <h3>E-mail</h3>
+                    <a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a>
+                </div>
 
-        </div>
-        <!-- Formular -->
+                <div class="coo-form">
+                    <img src="images/programme.png" alt="Icone d'horloge" class="coo-img">
+                    <h3>Horaires du secrétariat</h3>
+                    <p>Du lundi au vendredi: 07h30 - 16h00
+                        Samedi : 08h00 - 12h00
+                    </p>
+                </div>
+            </div>
+          </section>
 
-        <!-- Plans -->
-        <div class="local-plan-form">
+          <!-- Section Contact 2 -->
+           <section class="contact-2-section">
 
-          <h3 class="h3">Parlons de votre projet à Kinshasa</h3>
-          <p class="paragraph">
-               Vous souhaitez discuter de votre projet ? Retrouvez Stonnegams à Kinshasa ou contactez-nous directement en ligne.
-          </p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.881486365004!2d15.
-           318265274667!3d-4.4019740469688795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
-           1!3m3!1m2!1s0x1a6a39af17a92d31%3A0x468893ba38769c10!2sStonnegams!5e1!3m2!1sfr!2scd!4v1788960240226!5m2!1sfr!2scd"
-           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
-          </iframe>
+            <h2>Procédure d'inscription</h2>
+            <p>Quatre étapes simples pour rejoindre le Collège Horizon.</p>
 
-        </div>
-        <!-- Plans -->
+            <div class="numerotation-contant">
 
-     </section>
+                <div class="num-carte">
+                    <img src="images/numero-un.png" alt="1" class="chiff-img">
+                    <h3>Demande</h3>
+                    <p>Remplir le formulaire en ligne ou au secrétariat.</p>
+                </div>
 
+                <div class="num-carte">
+                    <img src="images/numero-2.png" alt="2" class="chiff-img">
+                    <h3>Dossier</h3>
+                    <p>Bulletins, acte de naissance et photo d'identité</p>
+                </div>
+
+                <div class="num-carte">
+                    <img src="images/numero-3.png" alt="3" class="chiff-img">
+                    <h3>Entretien</h3>
+                    <p>Rencontre avec la direction, l'élève et ses parents.</p>
+                </div>
+
+                <div class="num-carte">
+                    <img src="images/numero-4.png" alt="4" class="chiff-img">
+                    <h3>Confirmation</h3>
+                    <p>Paiement des frais et remise de la fiche d'inscription.</p>
+                </div>
+            </div>
+           </section>
     </main>
 
-     <!-- Footer -->
-          <footer>
+    <!-- Footer -->
+     <footer>
+        <!-- Image :(Utilisé comme backgroud de Footer) -->
+        <div class="foot-container">
 
-            <div class="foot-logo-footer">
-                <div class="logo"><span class="stonnegams" id="stonnegams">Stonnegams</span></div>
-                <p>Vivez une expérience digital moderne</p>
-
-                <div class="foot-medias-icon-links">
-                    <a href="https://linkedin.com/in/stonne-gams-5343bb3b3" target="_blank"><img src="https://thesvg.org/icons/linkedin/default.svg" alt="Contactez-moi et suivez-noi sur Linkedin" class="medias-svg-ico"></a>
-                    <a href="#" target="_blank"><img src="https://thesvg.org/icons/instagram/default.svg" alt="Restez informé et ne loupez rien en me suivant sur Instagram" class="medias-svg-ico"></a>
-                    <a href="#" target="_blank"><img src="https://thesvg.org/icons/tiktok-badge/default.svg" alt="Contactez-moi et suivez mes anventure developpeur sur Tiktok" class="medias-svg-ico"></a>
-                </div>
+        <div class="foot-logo">
+            <div class="logo">
+                <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                <span>Collège <strong>Horizon</strong></span>
             </div>
-            
-            <!-- MENU -->
-                <div class="foot-menu-links">
-                  <ul class="links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="realisation.html">Réalisations</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                  </ul>
-                </div>
+            <p>Former des citoyens instruits,
+                responsables et ouverts sur le monde.
+            </p>
+        </div>
 
-                <!-- CONTACT INFOS -->
-                 <div class="foot-contact-infos">
-                  <ul class="menu">
-                    <li><a href="tel:+243844583063">+243 844 583 063</a></li>
-                    <li><a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a></li>
-                    <li><a href="#">Linkedin</a></li>
-                  </ul>
-                 </div>
+        <div class="foot-links">
+            <ul class="foot-menu">
+                <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                <li><a href="contact.html" class="active" aria-label="Page de contact">Contact</a></li>
+            </ul>
+        </div>
 
-                 <!-- ADDRESS -->
-                <div class="foot-infos-address">
-                    <address>
-                      <p>
-                        Lemba, Salongo<br>
-                        Kinshasa<br>
-                        République démocratique du Congo
-                     </p>
-                    </address>
-                </div>
+        <div class="foot-infos">
+            <ul class="foot-menu">
+                <li><a href="inscription.html" aria-label="Inscription">Inscription</a></li>
+                <li><a href="index.html" aria-label="Calendrier scolaire">Calendrier scolaire</a></li>
+                <li><a href="programme.html" aria-label="Règlement intérieur">Règlement intérieur</a></li>
+                <li><a href="payment.html" aria-label="Payements">Payements</a></li>
+            </ul>
+        </div>
 
-                <!-- MENTION -->
-            <div class="foot-footer-mention">
-                <span class="footer">© 2026 Stonnegams. Tous droits réservés.</span> <span>Stonnegams</span>
-            </div>
-          </footer>
-          <script src="script.js"></script>
-     </body>
-     </html>
+        <div class="foot-contact-infos">
+            <p>1234 Candy avenue, Kinshasa/ Lemba RDC</p>
+            <a href="tel:+243844583063">+243 84 45 83 063</a>
+            <a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a>
+        </div>
+
+        <div class="foot-media-social">
+            <a href="facebook" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Icone facebook" class="social-img"></a>
+            <a href="instagram" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Icone instagram" class="social-img"></a>
+            <a href="linkedin" target="_blank" aria-label="Linkedin"><img src="images/linkedin.svg" alt="Icone Linkedin" class="social-img"></a>
+        </div>
+
+       </div>
+
+       <span>©2026 Collège Horizon. Tous droits réservés.</span>
+
+     </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

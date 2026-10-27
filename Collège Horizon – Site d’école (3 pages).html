@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Collège Horizon – Établissement secondaire</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e4fb0;--blue-d:#143a85;--pink:#e91e63;--orange:#f59e0b;--teal:#2ec4c9;--bg:#fff;--bg2:#f7f7f8;--tx:#222;--mut:#666;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#14161c;--bg2:#1b1e26;--tx:#eceef3;--mut:#a3a8b5}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#14161c;--bg2:#1b1e26;--tx:#eceef3;--mut:#a3a8b5}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:Montserrat,Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;font-size:15px}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--blue-d);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header .w{display:flex;align-items:center;justify-content:space-between;height:64px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:20px}.logo small{display:block;font-size:9px;font-weight:500;letter-spacing:1px;opacity:.8}
+nav a{margin-left:22px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 0;border-bottom:2px solid transparent}
+nav a.on,nav a:hover{border-color:var(--orange)}
+.hero{background:linear-gradient(120deg,var(--blue-d),var(--blue));color:#fff;padding:70px 0 100px}
+.hero .w{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center}
+.pic{height:300px;border-radius:12px;background:linear-gradient(160deg,#ffffff22,#ffffff08);display:flex;align-items:center;justify-content:center;font-size:90px}
+h1{font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1.15}h1 span,.hl{color:var(--orange)}
+.hero p{margin:16px 0 24px;font-size:13px;opacity:.9}
+.btn{display:inline-block;border:1px solid #fff;color:#fff;padding:12px 28px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:3px}
+.btn.o{background:var(--orange);border-color:var(--orange)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);margin-top:-52px;position:relative}
+.tiles a{height:104px;padding:20px;color:#fff;font-weight:800;font-size:20px;text-transform:uppercase;display:flex;flex-direction:column;justify-content:flex-end;line-height:1.1}
+.tiles a span{font-weight:400}
+.tiles a:nth-child(1){background:var(--pink)}.tiles a:nth-child(2){background:var(--orange)}.tiles a:nth-child(3){background:var(--teal)}
+.sec{padding:64px 0}.alt{background:var(--bg2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.eye{color:var(--mut);font-size:13px}
+h2{font-size:26px;font-weight:800;text-transform:uppercase;margin:6px 0 14px;line-height:1.2}
+.ctr{text-align:center}.ctr h2{font-weight:500;font-size:22px}.ctr>p{max-width:560px;margin:0 auto 36px;color:var(--mut);font-size:13px}
+.sig{font-family:cursive;font-size:26px;margin-top:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ic{font-size:38px}.grid4 h3{font-weight:500;margin:6px 0;letter-spacing:1px}.grid4 p,.card p{color:var(--mut);font-size:12.5px}
+.band{background:linear-gradient(90deg,var(--blue-d),var(--blue));color:#fff;padding:28px 32px;border-radius:4px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.band b{font-size:19px}
+.card{background:var(--bg);border:1px solid #8884;border-radius:8px;padding:22px}
+.alt .card{background:var(--bg)}
+.card h3{margin:8px 0;font-size:16px}
+.date{display:inline-block;background:var(--blue);color:#fff;border-radius:6px;padding:4px 12px;font-weight:700;font-size:12px}
+.pg{display:none}.pg.on{display:block}
+.ph{background:linear-gradient(120deg,var(--blue-d),var(--blue));color:#fff;padding:56px 0;text-align:center}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px 12px;border-bottom:1px solid #8884;text-align:left}th{background:var(--blue);color:#fff}
+.form{display:grid;gap:12px}input,textarea,select{font:inherit;padding:12px;border:1px solid #8886;border-radius:4px;background:var(--bg);color:var(--tx);width:100%}
+footer{background:#0f2a63;color:#dfe6f7;padding:48px 0 20px;font-size:13px}
+footer .grid4{text-align:left;gap:30px}footer h4{color:#fff;margin-bottom:10px;text-transform:uppercase;font-size:13px;letter-spacing:1px}footer li{list-style:none;margin:6px 0}footer ul{padding:0}
+.copy{border-top:1px solid #ffffff22;margin-top:30px;padding-top:16px;text-align:center;font-size:12px;opacity:.8}
+@media(max-width:760px){.hero .w,.two,.grid4,.grid3,.tiles{grid-template-columns:1fr}.hero .pic{display:none}nav a{margin:0 12px 0 0}header .w{height:auto;padding:10px 20px}.tiles{margin-top:-30px}table{display:block;overflow-x:auto}}
+</style>
+</head>
+<body>
+<header><div class="w">
+<a class="logo" href="#accueil">🎓 Collège Horizon<small>ÉTABLISSEMENT SECONDAIRE</small></a>
+<nav><a href="#accueil" data-p="accueil">Accueil</a><a href="#formations" data-p="formations">Formations</a><a href="#contact" data-p="contact">Contact</a></nav>
+</div></header>
+
+<!-- ACCUEIL -->
+<main id="accueil" class="pg">
+<section class="hero"><div class="w">
+<div class="pic">👩‍🎓</div>
+<div><h1>BIENVENUE AU <span>COLLÈGE HORIZON</span></h1>
+<p>L’éducation est l’arme la plus puissante pour changer le monde. Chez nous, chaque élève reçoit les moyens de développer ses talents, de cultiver sa curiosité et de bâtir son avenir avec confiance.</p>
+<a class="btn" href="#contact">Visiter l’école</a></div>
+</div></section>
+<div class="w"><div class="tiles"><a href="#contact">Événements<span>des élèves</span></a><a href="#formations">Vie en<span>classe</span></a><a href="#formations">Corps<span>enseignant</span></a></div></div>
+
+<section class="sec alt" style="margin-top:50px"><div class="w two">
+<div><p class="eye">Mot de la direction</p><h2>L’éducation est l’arme la plus puissante</h2>
+<p style="color:var(--mut);font-size:13px">Nos élèves sont talentueux, travailleurs et pleins d’idées. Nous les encourageons à les concrétiser grâce à des projets pratiques, du sport, des clubs et un accompagnement personnalisé. Notre mission est de former des citoyens instruits, responsables et ouverts sur le monde.</p>
+<div class="sig">Directrice</div><b style="font-size:13px">Mme la Directrice</b><div class="eye">Direction du Collège Horizon</div></div>
+<div class="grid3" style="grid-template-columns:1fr 1fr;gap:10px"><div class="pic" style="background:var(--blue);height:170px">📚</div><div class="pic" style="background:var(--pink);height:170px">🔬</div><div class="pic" style="background:var(--teal);height:170px">⚽</div><div class="pic" style="background:var(--orange);height:170px">🎨</div></div>
+</div></section>
+
+<section class="sec"><div class="w ctr"><h2>NOUS AVONS CONFIANCE EN L’AVENIR DE NOS ÉLÈVES</h2>
+<p>Quatre piliers guident notre projet éducatif au quotidien.</p>
+<div class="grid4">
+<div><div class="ic">⚛️</div><h3>S’épanouir</h3><p>Un cadre bienveillant pour révéler les talents de chacun.</p></div>
+<div><div class="ic">🌍</div><h3>S’ouvrir</h3><p>Langues, voyages et projets pour comprendre le monde.</p></div>
+<div><div class="ic">🎓</div><h3>Réussir</h3><p>Un taux de réussite élevé aux examens d’État.</p></div>
+<div><div class="ic">🏆</div><h3>Exceller</h3><p>Concours, olympiades et prix récompensent l’effort.</p></div>
+</div></div></section>
+
+<section class="w"><div class="band"><div><b>NOS ÉLÈVES SONT TALENTUEUX,</b><br>passionnés, travailleurs et pleins de bonnes idées.</div><a class="btn o" href="#contact">Inscrire mon enfant</a></div></section>
+
+<section class="sec"><div class="w ctr"><h2>CALENDRIER SCOLAIRE</h2><p>Les rendez-vous importants de l’année scolaire.</p>
+<div class="grid3" style="text-align:left">
+<div class="card"><span class="date">Début septembre</span><h3>Rentrée scolaire</h3><p>Accueil des élèves, remise des emplois du temps et réunion de parents.</p></div>
+<div class="card"><span class="date">Décembre</span><h3>Fête de fin de trimestre</h3><p>Spectacles, expositions et remise des bulletins du premier trimestre.</p></div>
+<div class="card"><span class="date">Juin</span><h3>Examens et remise des prix</h3><p>Évaluations de fin d’année et cérémonie de remise des diplômes.</p></div>
+</div></div></section>
+
+<section class="sec alt"><div class="w ctr"><h2>ILS PARLENT DE NOUS</h2><p>Témoignages de parents et d’élèves.</p>
+<div class="grid3" style="text-align:left">
+<div class="card"><p>« Un encadrement sérieux et chaleureux : mon fils a retrouvé confiance en lui. »</p><b style="font-size:13px">— Un parent d’élève</b></div>
+<div class="card"><p>« Les clubs et les projets rendent les cours vivants. J’ai appris à travailler en équipe. »</p><b style="font-size:13px">— Une élève de 3<sup>e</sup></b></div>
+<div class="card"><p>« Des enseignants disponibles qui nous poussent à donner le meilleur de nous-mêmes. »</p><b style="font-size:13px">— Un ancien élève</b></div>
+</div></div></section>
+</main>
+
+<!-- FORMATIONS -->
+<main id="formations" class="pg">
+<section class="ph"><h1>NOS <span>FORMATIONS</span></h1><p style="margin-top:10px;font-size:13px">Un parcours complet, de la 1<sup>re</sup> à la dernière année du secondaire.</p></section>
+<section class="sec"><div class="w ctr"><h2>NOS CYCLES D’ÉTUDES</h2><p>Un programme rigoureux, adapté à chaque étape du développement de l’élève.</p>
+<div class="grid3" style="text-align:left">
+<div class="card"><div class="ic">📘</div><h3>Cycle d’orientation (1<sup>re</sup>–2<sup>e</sup>)</h3><p>Consolidation des bases : français, mathématiques, sciences, histoire-géographie, anglais et informatique.</p></div>
+<div class="card"><div class="ic">🧪</div><h3>Section scientifique</h3><p>Mathématiques, physique, chimie et biologie avec travaux pratiques en laboratoire.</p></div>
+<div class="card"><div class="ic">📊</div><h3>Section commerciale et gestion</h3><p>Comptabilité, économie, droit et informatique de gestion pour préparer l’entrée dans la vie active.</p></div>
+</div></div></section>
+<section class="sec alt"><div class="w"><div class="ctr"><h2>EMPLOI DU TEMPS TYPE</h2><p>Exemple de journée en classe de 3<sup>e</sup>.</p></div>
+<table><tr><th>Horaire</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th></tr>
+<tr><td>07h30 – 09h10</td><td>Mathématiques</td><td>Français</td><td>Physique</td><td>Anglais</td><td>Histoire</td></tr>
+<tr><td>09h30 – 11h10</td><td>Français</td><td>Biologie</td><td>Mathématiques</td><td>Chimie</td><td>Géographie</td></tr>
+<tr><td>11h30 – 13h00</td><td>Informatique</td><td>Sport</td><td>Anglais</td><td>Mathématiques</td><td>Club / Atelier</td></tr></table></div></section>
+<section class="sec"><div class="w ctr"><h2>NOS ENSEIGNANTS</h2><p>Une équipe qualifiée, engagée et à l’écoute.</p>
+<div class="grid4">
+<div><div class="pic" style="background:var(--blue);height:120px;font-size:48px">👩‍🏫</div><h3>Mme Mireille K.</h3><p>Mathématiques</p></div>
+<div><div class="pic" style="background:var(--pink);height:120px;font-size:48px">👨‍🏫</div><h3>M. Patrick M.</h3><p>Français</p></div>
+<div><div class="pic" style="background:var(--teal);height:120px;font-size:48px">👩‍🔬</div><h3>Mme Sarah L.</h3><p>Sciences</p></div>
+<div><div class="pic" style="background:var(--orange);height:120px;font-size:48px">👨‍💻</div><h3>M. David T.</h3><p>Informatique</p></div>
+</div></div></section>
+<section class="w" style="padding-bottom:60px"><div class="band"><div><b>VIE SCOLAIRE</b><br>Sport, théâtre, journalisme, robotique, chorale et club de lecture.</div><a class="btn o" href="#contact">En savoir plus</a></div></section>
+</main>
+
+<!-- CONTACT -->
+<main id="contact" class="pg">
+<section class="ph"><h1>CONTACT ET <span>INSCRIPTIONS</span></h1><p style="margin-top:10px;font-size:13px">Nous répondons à toutes vos questions sous 48 heures.</p></section>
+<section class="sec"><div class="w two" style="align-items:start">
+<div><h2>Écrivez-nous</h2>
+<div class="form"><input placeholder="Nom et prénom du parent"><input type="email" placeholder="Adresse e-mail"><input type="tel" placeholder="Téléphone">
+<select><option>Classe souhaitée</option><option>1<sup>re</sup> année</option><option>2e année</option><option>3e année</option><option>4e année</option></select>
+<textarea rows="4" placeholder="Votre message"></textarea><button class="btn o" type="button" style="cursor:pointer">Envoyer la demande</button></div></div>
+<div><h2>Nos coordonnées</h2>
+<div class="card" style="margin-bottom:14px"><b>📍 Adresse</b><p>[Adresse de l’école], [Ville]</p></div>
+<div class="card" style="margin-bottom:14px"><b>📞 Téléphone</b><p>+243 000 000 000</p></div>
+<div class="card" style="margin-bottom:14px"><b>✉️ E-mail</b><p>contact@collegehorizon.example</p></div>
+<div class="card"><b>🕗 Horaires du secrétariat</b><p>Lundi – vendredi : 07h30 – 16h00<br>Samedi : 08h00 – 12h00</p></div></div>
+</div></section>
+<section class="sec alt"><div class="w ctr"><h2>PROCÉDURE D’INSCRIPTION</h2><p>Quatre étapes simples pour rejoindre le Collège Horizon.</p>
+<div class="grid4"><div><div class="ic">1️⃣</div><h3>Demande</h3><p>Remplir le formulaire en ligne ou au secrétariat.</p></div><div><div class="ic">2️⃣</div><h3>Dossier</h3><p>Bulletins, acte de naissance et photos d’identité.</p></div><div><div class="ic">3️⃣</div><h3>Entretien</h3><p>Rencontre avec la direction, l’élève et ses parents.</p></div><div><div class="ic">4️⃣</div><h3>Confirmation</h3><p>Paiement des frais et remise de la fiche d’inscription.</p></div></div></div></section>
+</main>
+
+<footer><div class="w">
+<div class="grid4">
+<div><h4>🎓 Collège Horizon</h4><p>Former des citoyens instruits, responsables et ouverts sur le monde.</p></div>
+<div><h4>Pages</h4><ul><li><a href="#accueil">Accueil</a></li><li><a href="#formations">Formations</a></li><li><a href="#contact">Contact</a></li></ul></div>
+<div><h4>Informations</h4><ul><li>Inscriptions</li><li>Calendrier scolaire</li><li>Règlement intérieur</li></ul></div>
+<div><h4>Contact</h4><ul><li>[Adresse de l’école]</li><li>+243 000 000 000</li><li>contact@collegehorizon.example</li></ul></div>
+</div>
+<div class="copy">© 2026 Collège Horizon. Tous droits réservés.</div>
+</div></footer>
+
+<script>
+function route(){var h=(location.hash||'#accueil').slice(1);if(!document.getElementById(h)||!document.getElementById(h).classList.contains('pg'))h='accueil';
+document.querySelectorAll('.pg').forEach(function(e){e.classList.toggle('on',e.id===h)});
+document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.p===h)});window.scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>

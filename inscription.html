@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Inscrivez votre enfant au Collège Horizon : remplissez le formulaire d'inscription en ligne avec les informations de l'élève, du parent et les documents requis.">
+    <meta name="keywords" content="inscription Collège Horizon, inscrire mon enfant, formulaire d'inscription, inscription école Kinshasa, inscription secondaire Lemba">
+    <title>Inscription des élèves | Collège Horizon</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/chapeau-de-remise-de-diplome.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+
+     <main>
+        <!-- Header (page hors menu : aucun lien actif) -->
+         <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                    <span>Collège <strong>Horizon</strong></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                     <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                      <li><a href="contact.html" aria-label="Page de contact">Contact</a></li>
+                </ul>
+            </nav>
+
+             <div class="banner">
+                <!-- Image : (Background du banner) -->
+                 <img src="images/contact-banner.jpg" alt="Des éléves dans une salle de classe" class="banner-img">
+
+                 <div class="banner-contenus">
+                    <h1>Réjoignez notre monde <strong>Inscrivez-vous</strong></h1>
+                    <p>Nous sommes absolument ravis de vous accompagner dans cette belle aventure éducative</p>
+                 </div>
+            </div>
+         </header>
+
+         <!-- Section inscription -->
+          <section class="inscription-1-section">
+            <h2>Formulaire d'inscription</h2>
+            <p>Remplissez les informations ci-dessous. Les champs marqués d'un <span class="req">*</span> sont obligatoires.</p>
+
+            <form class="form-inscription" action="" method="post" enctype="multipart/form-data">
+
+                <!-- Informations de l'élève -->
+                <fieldset class="insc-bloc">
+                    <legend>Informations de l'élève</legend>
+                    <div class="insc-grid insc-trois">
+                        <div class="champ">
+                            <label for="nom">Nom <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="nom" id="nom" placeholder="Nom" autocomplete="family-name" required>
+                        </div>
+                        <div class="champ">
+                            <label for="postnom">Postnom <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="postnom" id="postnom" placeholder="Postnom" required>
+                        </div>
+                        <div class="champ">
+                            <label for="prenom">Prénom <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" autocomplete="given-name" required>
+                        </div>
+                    </div>
+                    <div class="insc-grid">
+                        <div class="champ">
+                            <span class="champ-titre">Sexe <span class="req" aria-hidden="true">*</span></span>
+                            <div class="radio-groupe">
+                                <label><input type="radio" name="sexe" value="Féminin" required> Féminin</label>
+                                <label><input type="radio" name="sexe" value="Masculin"> Masculin</label>
+                            </div>
+                        </div>
+                        <div class="champ">
+                            <label for="naissance">Date de naissance <span class="req" aria-hidden="true">*</span></label>
+                            <input type="date" name="naissance" id="naissance" required>
+                        </div>
+                        <div class="champ">
+                            <label for="lieu-naissance">Lieu de naissance <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="lieu-naissance" id="lieu-naissance" placeholder="Ville ou territoire" required>
+                        </div>
+                        <div class="champ">
+                            <label for="nationalite">Nationalité <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="nationalite" id="nationalite" placeholder="Ex. : Congolaise" required>
+                        </div>
+                        <div class="champ champ-large">
+                            <label for="adresse-eleve">Adresse de résidence <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="adresse-eleve" id="adresse-eleve" placeholder="Avenue, numéro, quartier, commune" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Parcours scolaire -->
+                <fieldset class="insc-bloc">
+                    <legend>Parcours scolaire</legend>
+                    <div class="insc-grid">
+                        <div class="champ champ-large">
+                            <span class="champ-titre">Type d’inscription <span class="req" aria-hidden="true">*</span></span>
+                            <div class="radio-groupe">
+                                <label><input type="radio" name="type-inscription" value="Nouvelle inscription" required> Nouvelle inscription</label>
+                                <label><input type="radio" name="type-inscription" value="Transfert depuis une autre école"> Transfert depuis une autre école</label>
+                            </div>
+                        </div>
+                        <div class="champ">
+                            <label for="classe">Classe souhaitée <span class="req" aria-hidden="true">*</span></label>
+                            <select name="classe" id="classe" required>
+                                <option value="">Sélectionner</option><option value="1ère année">1ère année</option><option value="2ème année">2ème année</option><option value="3ème année">3ème année</option><option value="4ème année">4ème année</option><option value="5ème année">5ème année</option><option value="6ème année">6ème année</option>
+                            </select>
+                        </div>
+                        <div class="champ">
+                            <label for="section">Section / option souhaitée <span class="req" aria-hidden="true">*</span></label>
+                            <select name="section" id="section" required>
+                                <option value="">Sélectionner</option><option value="Cycle d'orientation (1ère - 2ème)">Cycle d'orientation (1ère - 2ème)</option><option value="Section scientifique">Section scientifique</option><option value="Section commerciale et gestion">Section commerciale et gestion</option>
+                            </select>
+                        </div>
+                        <div class="champ">
+                            <label for="ecole-precedente">École précédente</label>
+                            <input type="text" name="ecole-precedente" id="ecole-precedente" placeholder="Nom de l'école fréquentée">
+                        </div>
+                        <div class="champ">
+                            <label for="derniere-classe">Dernière classe réussie</label>
+                            <input type="text" name="derniere-classe" id="derniere-classe" placeholder="Ex. : 6ème primaire">
+                        </div>
+                        <div class="champ">
+                            <label for="pourcentage">Pourcentage obtenu (dernière année)</label>
+                            <input type="number" name="pourcentage" id="pourcentage" placeholder="Ex. : 68" min="0" max="100">
+                        </div>
+                        <div class="champ">
+                            <label for="langue">Langue la mieux maîtrisée</label>
+                            <select name="langue" id="langue">
+                                <option value="">Sélectionner</option><option value="Français">Français</option><option value="Lingala">Lingala</option><option value="Kikongo">Kikongo</option><option value="Swahili">Swahili</option><option value="Tshiluba">Tshiluba</option><option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Parent ou tuteur -->
+                <fieldset class="insc-bloc">
+                    <legend>Parent ou tuteur</legend>
+                    <div class="insc-grid">
+                        <div class="champ">
+                            <label for="lien">Lien avec l’élève <span class="req" aria-hidden="true">*</span></label>
+                            <select name="lien" id="lien" required>
+                                <option value="">Sélectionner</option><option value="Père">Père</option><option value="Mère">Mère</option><option value="Tuteur / Tutrice">Tuteur / Tutrice</option><option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="champ">
+                            <label for="parent-nom">Nom complet <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="parent-nom" id="parent-nom" placeholder="Nom et prénom" autocomplete="name" required>
+                        </div>
+                        <div class="champ">
+                            <label for="profession">Profession</label>
+                            <input type="text" name="profession" id="profession" placeholder="Profession">
+                        </div>
+                        <div class="champ">
+                            <label for="parent-tel">Téléphone <span class="req" aria-hidden="true">*</span></label>
+                            <input type="tel" name="parent-tel" id="parent-tel" placeholder="+243 ..." autocomplete="tel" required>
+                        </div>
+                        <div class="champ">
+                            <label for="parent-whatsapp">Téléphone WhatsApp (si différent)</label>
+                            <input type="tel" name="parent-whatsapp" id="parent-whatsapp" placeholder="+243 ...">
+                        </div>
+                        <div class="champ">
+                            <label for="parent-email">Adresse e-mail</label>
+                            <input type="email" name="parent-email" id="parent-email" placeholder="exemple@email.com" autocomplete="email">
+                        </div>
+                        <div class="champ champ-large">
+                            <label for="parent-adresse">Adresse du parent (si différente de celle de l’élève)</label>
+                            <input type="text" name="parent-adresse" id="parent-adresse" placeholder="Avenue, numéro, quartier, commune">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Santé et contact d'urgence -->
+                <fieldset class="insc-bloc">
+                    <legend>Santé et contact d'urgence</legend>
+                    <div class="insc-grid">
+                        <div class="champ">
+                            <label for="groupe-sanguin">Groupe sanguin</label>
+                            <select name="groupe-sanguin" id="groupe-sanguin">
+                                <option value="">Sélectionner</option><option value="A+">A+</option><option value="A-">A-</option><option value="B+">B+</option><option value="B-">B-</option><option value="AB+">AB+</option><option value="AB-">AB-</option><option value="O+">O+</option><option value="O-">O-</option><option value="Je ne sais pas">Je ne sais pas</option>
+                            </select>
+                        </div>
+                        <div class="champ">
+                            <label for="urgence-nom">Personne à contacter en cas d'urgence <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="urgence-nom" id="urgence-nom" placeholder="Nom et prénom" required>
+                        </div>
+                        <div class="champ">
+                            <label for="urgence-lien">Lien avec l’élève <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" name="urgence-lien" id="urgence-lien" placeholder="Ex. : oncle, tante, voisin" required>
+                        </div>
+                        <div class="champ">
+                            <label for="urgence-tel">Téléphone d'urgence <span class="req" aria-hidden="true">*</span></label>
+                            <input type="tel" name="urgence-tel" id="urgence-tel" placeholder="+243 ..." required>
+                        </div>
+                        <div class="champ champ-large">
+                            <label for="sante">Allergies, maladies ou besoins particuliers</label>
+                            <textarea name="sante" id="sante" maxlength="500" placeholder="Précisez toute information utile pour la sécurité et le suivi de l’élève."></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Documents à joindre -->
+                <fieldset class="insc-bloc">
+                    <legend>Documents à joindre</legend>
+                    <div class="insc-grid">
+                        <div class="champ">
+                            <label for="doc-naissance">Acte de naissance <span class="req" aria-hidden="true">*</span></label>
+                            <input type="file" name="doc-naissance" id="doc-naissance" accept=".pdf,.jpg,.jpeg,.png" required>
+                            <small>PDF ou image, 5 Mo maximum.</small>
+                        </div>
+                        <div class="champ">
+                            <label for="doc-bulletin">Dernier bulletin scolaire <span class="req" aria-hidden="true">*</span></label>
+                            <input type="file" name="doc-bulletin" id="doc-bulletin" accept=".pdf,.jpg,.jpeg,.png" required>
+                            <small>PDF ou image, 5 Mo maximum.</small>
+                        </div>
+                        <div class="champ">
+                            <label for="doc-photo">Photo d'identité <span class="req" aria-hidden="true">*</span></label>
+                            <input type="file" name="doc-photo" id="doc-photo" accept=".jpg,.jpeg,.png" required>
+                            <small>JPG ou PNG, fond clair.</small>
+                        </div>
+                        <div class="champ">
+                            <label for="doc-transfert">Attestation de transfert</label>
+                            <input type="file" name="doc-transfert" id="doc-transfert" accept=".pdf,.jpg,.jpeg,.png">
+                            <small>Seulement pour un transfert depuis une autre école.</small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Validation -->
+                <fieldset class="insc-bloc">
+                    <legend>Validation</legend>
+                    <label class="insc-accord">
+                        <input type="checkbox" name="certifie" required>
+                        <span>Je certifie que les informations fournies sont exactes. <span class="req" aria-hidden="true">*</span></span>
+                    </label>
+                    <label class="insc-accord">
+                        <input type="checkbox" name="reglement" required>
+                        <span>J'ai lu et j'accepte le <a href="regulations.html" target="_blank" rel="noopener">règlement intérieur</a> du Collège Horizon. <span class="req" aria-hidden="true">*</span></span>
+                    </label>
+
+                    <div class="insc-envoi">
+                        <p>Le secrétariat vous contactera sous 48 heures pour confirmer le dossier.</p>
+                        <button type="submit" id="submite">Envoyer l'inscription</button>
+                    </div>
+                </fieldset>
+            </form>
+          </section>
+
+          <!-- Section Contact 2 -->
+           <section class="contact-2-section">
+            
+            <h2>Procédure d'inscription</h2>
+            <p>Quatre étapes simples pour rejoindre le Collège Horizon.</p>
+
+            <div class="numerotation-contant">
+
+                <div class="num-carte">
+                    <img src="images/numero-un.png" alt="1" class="chiff-img">
+                    <h3>Demande</h3>
+                    <p>Remplir le formulaire en ligne ou au secrétariat.</p>
+                </div>
+
+                <div class="num-carte">
+                    <img src="images/numero-2.png" alt="2" class="chiff-img">
+                    <h3>Dossier</h3>
+                    <p>Bulletins, acte de naissance et photo d'identité</p>
+                </div>
+
+                <div class="num-carte">
+                    <img src="images/numero-3.png" alt="3" class="chiff-img">
+                    <h3>Entretien</h3>
+                    <p>Rencontre avec la direction, l'élève et ses parents.</p>
+                </div>
+
+                <div class="num-carte">
+                    <img src="images/numero-4.png" alt="4" class="chiff-img">
+                    <h3>Confirmation</h3>
+                    <p>Paiement des frais et remise de la fiche d'inscription.</p>
+                </div>
+            </div>
+           </section>
+    </main>
+
+    <!-- Footer -->
+     <footer>
+        <div class="foot-container">
+
+        <div class="foot-logo">
+            <div class="logo">
+                <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                <span>Collège <strong>Horizon</strong></span>
+            </div>
+            <p>Former des citoyens instruits,
+                responsables et ouverts sur le monde.
+            </p>
+        </div>
+
+        <div class="foot-links">
+            <ul class="foot-menu">
+                <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                <li><a href="contact.html" aria-label="Page de contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-infos">
+            <ul class="foot-menu">
+                <li><a href="inscription.html" class="active" aria-label="Inscription">Inscription</a></li>
+                <li><a href="index.html" aria-label="Calendrier scolaire">Calendrier scolaire</a></li>
+                <li><a href="regulations.html" aria-label="Règlement intérieur">Règlement intérieur</a></li>
+                <li><a href="payment.html" aria-label="Payements">Payements</a></li>
+            </ul>             
+        </div>
+
+        <div class="foot-contact-infos">
+            <p>1234 Candy avenue, Kinshasa/ Lemba RDC</p>
+            <a href="tel:+243844583063">+243 84 45 83 063</a>
+            <a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a>
+        </div>
+
+        <div class="foot-media-social">
+            <a href="facebook" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Icone facebook" class="social-img"></a>
+            <a href="instagram" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Icone instagram" class="social-img"></a>
+            <a href="linkedin" target="_blank" aria-label="Linkedin"><img src="images/linkedin.svg" alt="Icone Linkedin" class="social-img"></a>
+        </div>
+
+       </div>
+
+       <span>©2026 Collège Horizon. Tous droits réservés.</span>
+
+     </footer>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

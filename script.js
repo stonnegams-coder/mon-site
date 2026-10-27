@@ -1,381 +1,261 @@
-"use strict";
-
-/* =====================================================
-   STONNEGAMS — JAVASCRIPT PRINCIPAL
-   ===================================================== */
-
-
-/* =====================================================
-   1. BOUTONS "CONTACTEZ-MOI"
-   ===================================================== */
-
-const contactButtons = document.querySelectorAll("button");
-
-contactButtons.forEach((button) => {
-
-    if (button.textContent.trim() === "Contactez-moi") {
-
-        button.addEventListener("click", () => {
-
-            window.location.href = "contact.html#formular";
-
-        });
-
-    }
-
+/* ============================================================
+   Collège Horizon – script.js
+   1. Lien de la page active
+   2. Menu burger (mobile)
+   3. Galerie : visionneuse d'images en plein écran
+   4. Apparition douce des blocs au défilement
+   ============================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+    marquerPageActive();
+    initialiserBurger();
+    initialiserGalerie();
+    initialiserApparitions();
 });
 
+/* ---------- 1. Lien de la page active ---------- */
+function marquerPageActive() {
+    // Nom du fichier courant ("index.html" si l'adresse se termine par "/")
+    let page = window.location.pathname.split("/").pop();
+    if (page === "") page = "index.html";
 
-/* =====================================================
-   2. BOUTONS "DEVIS"
-   ===================================================== */
-
-const devisButtons = document.querySelectorAll("button");
-
-devisButtons.forEach((button) => {
-
-    if (button.textContent.trim() === "Demander un devis") {
-
-        button.addEventListener("click", () => {
-
-            const tarifs = document.getElementById("tarifs");
-
-            // Si la section tarifs existe sur la page actuelle
-            if (tarifs) {
-
-                tarifs.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
-            }
-
-            // Sinon, aller sur la page d'accueil
-            else {
-
-                window.location.href = "index.html#tarifs";
-
-            }
-
-        });
-
-    }
-
-});
-
-
-/* =====================================================
-   3. BOUTON RETOUR EN HAUT
-   ===================================================== */
-
-const backToTop = document.getElementById("backToTop");
-
-if (backToTop) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 400) {
-
-            backToTop.classList.add("show");
-
+    const liens = document.querySelectorAll(".nav-menu a, .foot-links a");
+    liens.forEach((lien) => {
+        const cible = lien.getAttribute("href").split("#")[0];
+        const estActif = cible === page;
+        lien.classList.toggle("active", estActif);
+        if (estActif) {
+            lien.setAttribute("aria-current", "page");
         } else {
-
-            backToTop.classList.remove("show");
-
+            lien.removeAttribute("aria-current");
         }
+    });
+}
 
+/* ---------- 2. Menu burger ---------- */
+function initialiserBurger() {
+    const barre = document.querySelector(".navbar");
+    const menu = document.querySelector(".nav-menu");
+    if (!barre || !menu) return;
+
+    // Le bouton est créé ici : pas besoin de modifier le HTML
+    const bouton = document.createElement("button");
+    bouton.type = "button";
+    bouton.className = "burger";
+    bouton.setAttribute("aria-label", "Ouvrir le menu");
+    bouton.setAttribute("aria-expanded", "false");
+    bouton.innerHTML = "<span></span><span></span><span></span>";
+
+    menu.id = menu.id || "menu-principal";
+    bouton.setAttribute("aria-controls", menu.id);
+
+    barre.insertBefore(bouton, menu);
+    barre.classList.add("has-burger"); // le CSS ne cache le menu que si le JS est actif
+
+    const ouvrir = (etat) => {
+        barre.classList.toggle("open", etat);
+        bouton.setAttribute("aria-expanded", String(etat));
+        bouton.setAttribute("aria-label", etat ? "Fermer le menu" : "Ouvrir le menu");
+    };
+
+    bouton.addEventListener("click", () => ouvrir(!barre.classList.contains("open")));
+
+    // Fermer en cliquant sur un lien
+    menu.querySelectorAll("a").forEach((lien) =>
+        lien.addEventListener("click", () => ouvrir(false))
+    );
+
+    // Fermer avec la touche Échap
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && barre.classList.contains("open")) {
+            ouvrir(false);
+            bouton.focus();
+        }
     });
 
-
-    backToTop.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
+    // Fermer en cliquant en dehors de la barre
+    document.addEventListener("click", (e) => {
+        if (barre.classList.contains("open") && !barre.contains(e.target)) ouvrir(false);
     });
 
+    // Réinitialiser si on repasse en affichage large
+    window.matchMedia("(min-width: 721px)").addEventListener("change", (e) => {
+        if (e.matches) ouvrir(false);
+    });
 }
 
+/* ---------- 3. Apparitions discrètes au défilement ---------- */
+function initialiserApparitions() {
+    const sansAnimation =
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        !("IntersectionObserver" in window);
+    if (sansAnimation) return;
 
-/* =====================================================
-   4. GESTION DES ANCRES
-   ===================================================== */
+    const selecteurs = [
+        ".from-content figure",
+        ".home-2-grid img",
+        ".icon-piliers",
+        ".big-block",
+        ".fig-2-content figure",
+        ".fig-3-content figure",
+        ".testmony-content blockquote",
+        ".table-content",
+        ".images",
+        ".formular-form",
+        ".coo-form",
+        ".num-carte",
+        ".school-img",
+        ".carte-plan-maps",
+        ".carte-image-batiment",
+        ".reg-block-number"
+    ].join(",");
 
-window.addEventListener("load", () => {
+    const elements = document.querySelectorAll(selecteurs);
 
-    const hash = window.location.hash;
+    // Léger décalage entre les éléments d'un même groupe (3 maximum)
+    const compteurs = new Map();
+    elements.forEach((el) => {
+        const index = compteurs.get(el.parentElement) || 0;
+        compteurs.set(el.parentElement, index + 1);
+        el.style.transitionDelay = Math.min(index, 3) * 90 + "ms";
+        el.classList.add("reveal");
+    });
 
-    if (hash) {
+    const observateur = new IntersectionObserver(
+        (entrees) => {
+            entrees.forEach((entree) => {
+                if (!entree.isIntersecting) return;
+                const el = entree.target;
+                el.classList.add("visible");
+                observateur.unobserve(el);
 
-        const target = document.querySelector(hash);
+                // Nettoyage : on rend la main au CSS d'origine (survols, etc.)
+                setTimeout(() => {
+                    el.classList.remove("reveal", "visible");
+                    el.style.transitionDelay = "";
+                }, 900);
+            });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
 
-        if (target) {
+    elements.forEach((el) => observateur.observe(el));
+}
 
-            setTimeout(() => {
+/* ---------- 4. Galerie : visionneuse plein écran ---------- */
+function initialiserGalerie() {
+    const vignettes = Array.from(document.querySelectorAll(".galery-school img, .gallery-item"));
+    if (!vignettes.length) return;
 
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+    // Construction de la visionneuse (aucun HTML à ajouter)
+    const boite = document.createElement("div");
+    boite.className = "lightbox";
+    boite.hidden = true;
+    boite.setAttribute("role", "dialog");
+    boite.setAttribute("aria-modal", "true");
+    boite.setAttribute("aria-label", "Visionneuse d'images");
+    boite.innerHTML =
+        '<button type="button" class="lightbox-close" aria-label="Fermer la visionneuse">&times;</button>' +
+        '<button type="button" class="lightbox-nav prev" aria-label="Image précédente">&#8249;</button>' +
+        '<figure class="lightbox-figure">' +
+        '<img class="lightbox-img" alt="">' +
+        '<figcaption class="lightbox-legende"></figcaption>' +
+        "</figure>" +
+        '<button type="button" class="lightbox-nav next" aria-label="Image suivante">&#8250;</button>';
+    document.body.appendChild(boite);
 
-            }, 100);
+    const image = boite.querySelector(".lightbox-img");
+    const legende = boite.querySelector(".lightbox-legende");
+    const boutons = boite.querySelectorAll("button");
+    const fermer = boite.querySelector(".lightbox-close");
+    let courant = 0;
+    let declencheur = null;
 
+    function afficher(index) {
+        courant = (index + vignettes.length) % vignettes.length; // boucle sans fin
+        const vignette = vignettes[courant];
+        const source = vignette.tagName === "IMG" ? vignette : vignette.querySelector("img");
+        const lien = source.getAttribute("src");
+
+        if (lien) {
+            image.setAttribute("src", lien);
+        } else {
+            image.removeAttribute("src");
         }
-
+        image.alt = source.alt;
+        legende.innerHTML = "";
+        legende.append(source.alt);
+        const compteur = document.createElement("span");
+        compteur.className = "lightbox-compteur";
+        compteur.textContent = courant + 1 + " / " + vignettes.length;
+        legende.append(compteur);
     }
 
-});
-
-
-/* =====================================================
-   5. MESSAGE APRÈS ENVOI DU FORMULAIRE
-   ===================================================== */
-
-const params = new URLSearchParams(window.location.search);
-
-if (params.get("sent") === "true") {
-
-    alert("Merci ! Votre demande a bien été envoyée à Stonnegams.");
-
-}
-
-/* =========================================================
-   STONNEGAMS — TEXTES DYNAMIQUES
-   Changement automatique toutes les 5 secondes
-   ========================================================= */
-
-
-/* =========================================================
-   1. ANIMATION DU HERO
-   ========================================================= */
-
-const heroTitle = document.querySelector(".titles .title");
-const heroDescription = document.querySelector(".titles .paragraph");
-
-const heroContents = [
-    {
-        title: "Donnez à votre entreprise la présence en ligne qu'elle mérite.",
-        description:
-            "Stonnegams conçoit des sites web modernes, rapides et professionnels pour présenter votre activité et attirer de nouveaux clients."
-    },
-
-    {
-        title: "Transformez votre idée en une expérience web professionnelle.",
-        description:
-            "De la conception au développement, chaque projet est pensé pour offrir une présence digitale claire, moderne et adaptée à votre activité."
-    },
-
-    {
-        title: "Votre activité mérite un site web à votre image.",
-        description:
-            "Nous créons des interfaces élégantes, responsives et conçues pour mettre vos services en valeur sur ordinateur, tablette et mobile."
-    },
-
-    {
-        title: "Construisez une présence digitale qui inspire confiance.",
-        description:
-            "Un site professionnel vous permet de présenter votre savoir-faire, renforcer votre crédibilité et faciliter le contact avec vos futurs clients."
-    }
-];
-
-
-let heroIndex = 0;
-
-
-/* Fonction qui change le contenu du Hero */
-
-function changeHeroContent() {
-
-    if (!heroTitle || !heroDescription) {
-        return;
+    function ouvrir(index) {
+        declencheur = document.activeElement;
+        afficher(index);
+        boite.hidden = false;
+        document.body.classList.add("lightbox-open");
+        requestAnimationFrame(() => boite.classList.add("open"));
+        fermer.focus();
     }
 
+    function quitter() {
+        boite.classList.remove("open");
+        boite.hidden = true;
+        document.body.classList.remove("lightbox-open");
+        if (declencheur) declencheur.focus();
+    }
 
-    /* Faire disparaître l'ancien contenu */
-
-    heroTitle.classList.add("text-slide-out");
-    heroDescription.classList.add("text-slide-out");
-
-
-    setTimeout(() => {
-
-        /* Passer au contenu suivant */
-
-        heroIndex++;
-
-        if (heroIndex >= heroContents.length) {
-            heroIndex = 0;
+    vignettes.forEach((v, i) => {
+        // Les images ne sont pas des boutons : on les rend accessibles au clavier
+        if (v.tagName === "IMG") {
+            v.tabIndex = 0;
+            v.setAttribute("role", "button");
+            v.setAttribute("aria-label", "Agrandir la photo : " + v.alt);
+            v.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault(); // évite que la touche active aussitôt le bouton de fermeture
+                    ouvrir(i);
+                }
+            });
         }
+        v.addEventListener("click", () => ouvrir(i));
+    });
+    boite.querySelector(".prev").addEventListener("click", () => afficher(courant - 1));
+    boite.querySelector(".next").addEventListener("click", () => afficher(courant + 1));
+    fermer.addEventListener("click", quitter);
 
+    // Clic sur le fond sombre = fermer
+    boite.addEventListener("click", (e) => {
+        if (e.target === boite) quitter();
+    });
 
-        const newContent = heroContents[heroIndex];
-
-
-        /* Nouveau contenu */
-
-        heroTitle.innerHTML = newContent.title;
-
-        heroDescription.textContent = newContent.description;
-
-
-        /* Préparer l'arrivée depuis la droite */
-
-        heroTitle.classList.remove("text-slide-out");
-        heroDescription.classList.remove("text-slide-out");
-
-        heroTitle.classList.add("text-slide-in");
-        heroDescription.classList.add("text-slide-in");
-
-
-        /* Lancer l'entrée */
-
-        requestAnimationFrame(() => {
-
-            heroTitle.classList.remove("text-slide-in");
-            heroDescription.classList.remove("text-slide-in");
-
-            heroTitle.classList.add("text-visible");
-            heroDescription.classList.add("text-visible");
-
-        });
-
-    }, 600);
-}
-
-
-/* Changement toutes les 5 secondes */
-
-if (heroTitle && heroDescription) {
-
-    heroTitle.classList.add("text-visible");
-    heroDescription.classList.add("text-visible");
-
-    setInterval(changeHeroContent, 5000);
-}
-
-
-
-/* =========================================================
-   2. ANIMATION DE LA SECTION ABOUT
-   ========================================================= */
-
-const aboutTitle = document.querySelector(".about-title");
-const aboutDescription = document.querySelector(".about-description");
-
-
-const aboutContents = [
-
-    {
-        title: "Pourquoi choisir <strong>Stonnegams</strong> ?",
-
-        description:
-            "Stonnegams accompagne les entrepreneurs, indépendants et entreprises dans la création d'une présence web moderne et professionnelle. Chaque projet est pensé pour valoriser votre activité et faciliter la connexion avec vos futurs clients."
-    },
-
-    {
-        title: "Un site pensé pour votre <strong>activité</strong>.",
-
-        description:
-            "Votre site ne doit pas seulement être esthétique. Il doit présenter clairement vos services, transmettre votre identité et permettre à vos visiteurs de comprendre rapidement ce que vous proposez."
-    },
-
-    {
-        title: "Une expérience adaptée à tous les <strong>écrans</strong>.",
-
-        description:
-            "Ordinateur, tablette ou smartphone : votre site doit rester agréable à consulter partout. Stonnegams privilégie une conception responsive pour offrir une expérience fluide à chaque visiteur."
-    },
-
-    {
-        title: "Votre image mérite une présence <strong>professionnelle</strong>.",
-
-        description:
-            "Un site web bien conçu peut renforcer la crédibilité de votre entreprise et donner à vos visiteurs une première impression claire, moderne et rassurante."
-    },
-
-    {
-        title: "Un accompagnement centré sur votre <strong>projet</strong>.",
-
-        description:
-            "Chaque activité possède ses propres besoins. C'est pourquoi la conception du site est adaptée à vos objectifs, à votre identité et aux services que vous souhaitez mettre en avant."
-    }
-
-];
-
-
-let aboutIndex = 0;
-
-
-/* Fonction de changement */
-
-function changeAboutContent() {
-
-    if (!aboutTitle || !aboutDescription) {
-        return;
-    }
-
-
-    /* Sortie de l'ancien texte */
-
-    aboutTitle.classList.add("text-slide-out");
-    aboutDescription.classList.add("text-slide-out");
-
-
-    setTimeout(() => {
-
-        /* Passer au texte suivant */
-
-        aboutIndex++;
-
-        if (aboutIndex >= aboutContents.length) {
-            aboutIndex = 0;
+    // Clavier : Échap, flèches, et Tab qui reste dans la visionneuse
+    document.addEventListener("keydown", (e) => {
+        if (boite.hidden) return;
+        if (e.key === "Escape") quitter();
+        if (e.key === "ArrowLeft") afficher(courant - 1);
+        if (e.key === "ArrowRight") afficher(courant + 1);
+        if (e.key === "Tab") {
+            const premier = boutons[0];
+            const dernier = boutons[boutons.length - 1];
+            if (e.shiftKey && document.activeElement === premier) {
+                e.preventDefault();
+                dernier.focus();
+            } else if (!e.shiftKey && document.activeElement === dernier) {
+                e.preventDefault();
+                premier.focus();
+            }
         }
+    });
 
-
-        const newContent = aboutContents[aboutIndex];
-
-
-        /* Remplacer le contenu */
-
-        aboutTitle.innerHTML = newContent.title;
-
-        aboutDescription.innerHTML =
-            "<mark>" + newContent.description + "</mark>";
-
-
-        /* Préparer l'arrivée */
-
-        aboutTitle.classList.remove("text-slide-out");
-        aboutDescription.classList.remove("text-slide-out");
-
-        aboutTitle.classList.add("text-slide-in");
-        aboutDescription.classList.add("text-slide-in");
-
-
-        /* Faire entrer le nouveau texte */
-
-        requestAnimationFrame(() => {
-
-            aboutTitle.classList.remove("text-slide-in");
-            aboutDescription.classList.remove("text-slide-in");
-
-            aboutTitle.classList.add("text-visible");
-            aboutDescription.classList.add("text-visible");
-
-        });
-
-    }, 600);
-}
-
-
-/* Changement toutes les 5 secondes */
-
-if (aboutTitle && aboutDescription) {
-
-    aboutTitle.classList.add("text-visible");
-    aboutDescription.classList.add("text-visible");
-
-    setInterval(changeAboutContent, 5000);
+    // Balayage du doigt sur mobile
+    let departX = null;
+    boite.addEventListener("touchstart", (e) => (departX = e.touches[0].clientX), { passive: true });
+    boite.addEventListener("touchend", (e) => {
+        if (departX === null) return;
+        const ecart = e.changedTouches[0].clientX - departX;
+        if (Math.abs(ecart) > 50) afficher(courant + (ecart < 0 ? 1 : -1));
+        departX = null;
+    });
 }

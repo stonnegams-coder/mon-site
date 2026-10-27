@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Réglez l'acompte de scolarité du Collège Horizon en ligne par carte bancaire ou mobile money. Acompte minimum : 150 $.">
+    <meta name="keywords" content="paiement Collège Horizon, acompte scolarité, paiement carte bancaire, mobile money, M-Pesa, Orange Money, Airtel Money, frais scolaires Kinshasa">
+    <title>Paiement de l'acompte | Collège Horizon</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/chapeau-de-remise-de-diplome.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+
+     <main>
+        <!-- Header (page hors menu : aucun lien actif) -->
+         <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                    <span>Collège <strong>Horizon</strong></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                     <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                      <li><a href="contact.html" aria-label="Page de contact">Contact</a></li>
+                </ul>
+            </nav>
+         </header>
+
+         <!-- Section paiement -->
+          <section class="paiement-1-section">
+            <h2>Paiement de l'acompte</h2>
+            <p>Réglez l'acompte de scolarité par carte bancaire ou par mobile money. Les champs marqués d'un <span class="req">*</span> sont obligatoires.</p>
+
+            <div class="pay-layout">
+
+                <form class="form-inscription form-paiement" action="" method="post">
+
+                    <!-- Élève et payeur -->
+                    <fieldset class="insc-bloc">
+                        <legend>Élève et payeur</legend>
+                        <div class="insc-grid">
+                            <div class="champ">
+                                <label for="pay-eleve">Nom complet de l'élève <span class="req" aria-hidden="true">*</span></label>
+                                <input type="text" name="pay-eleve" id="pay-eleve" placeholder="Nom, postnom et prénom" required>
+                            </div>
+                            <div class="champ">
+                                <label for="pay-dossier">Numéro de dossier</label>
+                                <input type="text" name="pay-dossier" id="pay-dossier" placeholder="Si vous en avez un">
+                            </div>
+                            <div class="champ">
+                                <label for="pay-payeur">Nom du payeur <span class="req" aria-hidden="true">*</span></label>
+                                <input type="text" name="pay-payeur" id="pay-payeur" placeholder="Nom et prénom" autocomplete="name" required>
+                            </div>
+                            <div class="champ">
+                                <label for="pay-email">E-mail pour le reçu <span class="req" aria-hidden="true">*</span></label>
+                                <input type="email" name="pay-email" id="pay-email" placeholder="exemple@email.com" autocomplete="email" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Montant -->
+                    <fieldset class="insc-bloc">
+                        <legend>Montant de l'acompte</legend>
+                        <div class="insc-grid">
+                            <div class="champ">
+                                <label for="montant">Montant à payer (USD) <span class="req" aria-hidden="true">*</span></label>
+                                <div class="pay-montant">
+                                    <input type="number" name="montant" id="montant" min="150" step="1" value="150" inputmode="numeric" required>
+                                    <span aria-hidden="true">$</span>
+                                </div>
+                                <small>Acompte minimum : 150 $. Vous pouvez payer davantage.</small>
+                            </div>
+                            <div class="champ">
+                                <span class="champ-titre">Montants rapides</span>
+                                <div class="pay-montant-rapide">
+                                    <button type="button" class="pay-chip" data-montant="150">150 $</button>
+                                    <button type="button" class="pay-chip" data-montant="200">200 $</button>
+                                    <button type="button" class="pay-chip" data-montant="300">300 $</button>
+                                    <button type="button" class="pay-chip" data-montant="500">500 $</button>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Mode de paiement -->
+                    <fieldset class="insc-bloc">
+                        <legend>Mode de paiement</legend>
+
+                        <div class="pay-methodes">
+                            <label class="pay-methode">
+                                <input type="radio" name="methode" value="carte" checked>
+                                <span class="pay-icone" aria-hidden="true">💳</span>
+                                <strong>Carte bancaire</strong>
+                                <small>Visa, Mastercard</small>
+                            </label>
+                            <label class="pay-methode">
+                                <input type="radio" name="methode" value="mobile">
+                                <span class="pay-icone" aria-hidden="true">📱</span>
+                                <strong>Mobile money</strong>
+                                <small>M-Pesa, Orange Money, Airtel Money</small>
+                            </label>
+                        </div>
+
+                        <!-- Paiement par carte -->
+                        <fieldset class="pay-panel" data-methode="carte">
+                            <div class="champ champ-large">
+                                <label for="carte-nom">Nom du titulaire <span class="req" aria-hidden="true">*</span></label>
+                                <input type="text" name="carte-nom" id="carte-nom" placeholder="Nom inscrit sur la carte" autocomplete="cc-name" required>
+                            </div>
+                            <div class="champ champ-large">
+                                <label for="carte-numero">Numéro de carte <span class="req" aria-hidden="true">*</span></label>
+                                <input type="text" name="carte-numero" id="carte-numero" placeholder="1234 5678 9012 3456" inputmode="numeric" autocomplete="cc-number" maxlength="23" required>
+                            </div>
+                            <div class="champ">
+                                <label for="carte-expiration">Date d'expiration <span class="req" aria-hidden="true">*</span></label>
+                                <input type="text" name="carte-expiration" id="carte-expiration" placeholder="MM/AA" inputmode="numeric" autocomplete="cc-exp" maxlength="5" pattern="(0[1-9]|1[0-2])/[0-9]{2}" required>
+                            </div>
+                            <div class="champ">
+                                <label for="carte-cvv">Code de sécurité (CVV) <span class="req" aria-hidden="true">*</span></label>
+                                <input type="password" name="carte-cvv" id="carte-cvv" placeholder="123" inputmode="numeric" autocomplete="cc-csc" maxlength="4" pattern="[0-9]{3,4}" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- Paiement par mobile money -->
+                        <fieldset class="pay-panel" data-methode="mobile" hidden disabled>
+                            <div class="champ">
+                                <label for="mobile-operateur">Opérateur <span class="req" aria-hidden="true">*</span></label>
+                                <select name="mobile-operateur" id="mobile-operateur" required>
+                                    <option value="">Sélectionner</option>
+                                    <option value="M-Pesa">M-Pesa (Vodacom)</option>
+                                    <option value="Orange Money">Orange Money</option>
+                                    <option value="Airtel Money">Airtel Money</option>
+                                    <option value="Africell Money">Africell Money</option>
+                                </select>
+                            </div>
+                            <div class="champ">
+                                <label for="mobile-numero">Numéro mobile money <span class="req" aria-hidden="true">*</span></label>
+                                <input type="tel" name="mobile-numero" id="mobile-numero" placeholder="+243 ..." autocomplete="tel" required>
+                            </div>
+                            <div class="champ champ-large">
+                                <label for="mobile-nom">Nom associé au compte</label>
+                                <input type="text" name="mobile-nom" id="mobile-nom" placeholder="Nom enregistré chez l'opérateur">
+                            </div>
+                            <p class="pay-note champ-large">Après l'envoi, vous recevrez une demande de confirmation sur votre téléphone. Saisissez votre code PIN pour valider le paiement.</p>
+                        </fieldset>
+                    </fieldset>
+
+                    <!-- Validation -->
+                    <fieldset class="insc-bloc">
+                        <legend>Confirmation</legend>
+                        <label class="insc-accord">
+                            <input type="checkbox" name="confirmation" required>
+                            <span>Je confirme le paiement de cet acompte et j'ai lu le <a href="regulations.html" target="_blank" rel="noopener">règlement intérieur</a>. <span class="req" aria-hidden="true">*</span></span>
+                        </label>
+
+                        <div class="insc-envoi">
+                            <p>Un reçu vous sera envoyé par e-mail après le paiement.</p>
+                            <button type="submit" id="submite">Payer <span data-total>150</span> $</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <!-- Récapitulatif -->
+                <aside class="pay-resume" aria-label="Récapitulatif du paiement">
+                    <h3>Récapitulatif</h3>
+                    <div class="pay-ligne"><span>Acompte de scolarité</span><strong><span data-total>150</span> $</strong></div>
+                    <div class="pay-ligne"><span>Mode de paiement</span><strong data-methode-nom>Carte bancaire</strong></div>
+                    <div class="pay-ligne pay-total"><span>Total à payer</span><strong><span data-total>150</span> $</strong></div>
+                    <ul class="pay-notes">
+                        <li>🔒 Paiement sécurisé</li>
+                        <li>Acompte minimum : 150 $</li>
+                        <li>Besoin d'aide ? <a href="tel:+243844583063">+243 84 45 83 063</a></li>
+                    </ul>
+                </aside>
+
+            </div>
+          </section>
+    </main>
+
+    <!-- Footer -->
+     <footer>
+        <div class="foot-container">
+
+        <div class="foot-logo">
+            <div class="logo">
+                <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                <span>Collège <strong>Horizon</strong></span>
+            </div>
+            <p>Former des citoyens instruits,
+                responsables et ouverts sur le monde.
+            </p>
+        </div>
+
+        <div class="foot-links">
+            <ul class="foot-menu">
+                <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                <li><a href="contact.html" aria-label="Page de contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-infos">
+            <ul class="foot-menu">
+                <li><a href="contact.html" aria-label="Inscription">Inscription</a></li>
+                <li><a href="index.html" aria-label="Calendrier scolaire">Calendrier scolaire</a></li>
+                <li><a href="regulations.html" aria-label="Règlement intérieur">Règlement intérieur</a></li>
+                <li><a href="payment.html" class="active" aria-label="Payements">Payements</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-contact-infos">
+            <p>1234 Candy avenue, Kinshasa/ Lemba RDC</p>
+            <a href="tel:+243844583063">+243 84 45 83 063</a>
+            <a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a>
+        </div>
+
+        <div class="foot-media-social">
+            <a href="facebook" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Icone facebook" class="social-img"></a>
+            <a href="instagram" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Icone instagram" class="social-img"></a>
+            <a href="linkedin" target="_blank" aria-label="Linkedin"><img src="images/linkedin.svg" alt="Icone Linkedin" class="social-img"></a>
+        </div>
+
+       </div>
+
+       <span>©2026 Collège Horizon. Tous droits réservés.</span>
+
+     </footer>
+
+    </div>
+
+    <script src="index2.js"></script>
+</body>
+</html>
