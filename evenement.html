@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cérémonies, sorties, journées portes ouvertes et rencontres : toutes les dates des événements du Collège Horizon pour les parents et les élèves.">
+    <meta name="keywords" content="événements école, cérémonies, sorties pédagogiques, journée portes ouvertes, actualités école, Collège Horizon, école Kinshasa">
+    <title>Événements de l'école | Collège Horizon</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/chapeau-de-remise-de-diplome.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+
+     <main>
+        <!-- Header -->
+         <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                    <span>Collège <strong>Horizon</strong></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                     <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                     <li><a href="evenement.html" aria-label="Page d'événement">Événement</a></li>
+                      <li><a href="contact.html" aria-label="Page de contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="banner">
+                <img src="images/banner-événement.jpg" alt="Élèves lors d'une cérémonie au Collège Horizon" class="banner-img">
+
+                <div class="banner-contenus">
+                    <h1>Nos <strong>événements</strong></h1>
+                    <p>Cérémonies, sorties, rencontres : suivez toute la vie du collège.</p>
+                </div>
+            </div>
+         </header>
+
+         <!-- Section événements 1 : à la une -->
+          <section class="evenements-1-section">
+            <h2>À la une</h2>
+            <p>Les nouvelles importantes de l'école, pour ne rien manquer de la vie du collège.</p>
+
+            <div class="une-carrousel" role="region" aria-roledescription="carrousel" aria-label="Informations à la une">
+                <div class="une-piste" aria-live="off">
+                    <article class="une-slide actif" role="group" aria-roledescription="diapositive" aria-label="1 sur 3">
+                        <div class="une-image">
+                            <img src="images/rétraite.jpg" alt="Un professeur entouré de ses élèves">
+                        </div>
+                        <div class="une-texte">
+                            <span class="une-tag">Hommage</span>
+                            <h3>M. Robert L. part à la retraite</h3>
+                            <p>Après 25 années passées à enseigner le français au Collège Horizon, M. Patrick M. entame un repos bien mérité. Élèves, collègues et parents lui rendent hommage lors de la fête de fin de trimestre.</p>
+                        </div>
+                    </article>
+                    <article class="une-slide" role="group" aria-roledescription="diapositive" aria-label="2 sur 3">
+                        <div class="une-image">
+                            <img src="images/meilleur.jpg" alt="Une élève tenant son trophée de major de l'école">
+                        </div>
+                        <div class="une-texte">
+                            <span class="une-tag">Distinction</span>
+                            <h3>Sarah N., meilleure élève de toute l'école</h3>
+                            <p>Élève de 6e année, Sarah N. a obtenu la meilleure moyenne de tout le collège et reçoit le titre de major de l'école. Bravo à elle et à toute l'équipe qui l'a accompagnée.</p>
+                        </div>
+                    </article>
+                    <article class="une-slide" role="group" aria-roledescription="diapositive" aria-label="3 sur 3">
+                        <div class="une-image">
+                            <img src="images/sortie.jpg" alt="Des élèves en sortie pédagogique">
+                        </div>
+                        <div class="une-texte">
+                            <span class="une-tag">À venir</span>
+                            <h3>Sortie pédagogique des classes de sciences</h3>
+                            <p>Le 11 novembre, les élèves de 3e et 4e années partiront découvrir sur le terrain ce qu'ils étudient en classe. N'oubliez pas de signer l'autorisation parentale avant le départ.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="une-controles">
+                    <button type="button" class="une-fleche une-prec" aria-label="Information précédente">&#8249;</button>
+                    <div class="une-points">
+                            <button type="button" class="une-point" aria-label="Afficher l'information 1" aria-current="true"></button>
+                            <button type="button" class="une-point" aria-label="Afficher l'information 2"></button>
+                            <button type="button" class="une-point" aria-label="Afficher l'information 3"></button>
+                    </div>
+                    <button type="button" class="une-fleche une-suiv" aria-label="Information suivante">&#8250;</button>
+                    <button type="button" class="une-fleche une-pause" aria-label="Mettre en pause le défilement" aria-pressed="false">&#10074;&#10074;</button>
+                </div>
+
+                <!-- Barre de progression : 5,9 secondes par information -->
+                <div class="une-progression" aria-hidden="true"><span></span></div>
+            </div>
+          </section>
+
+         <!-- Section événements 2 : prochains événements -->
+          <section class="evenements-2-section">
+            <h2>Prochains événements</h2>
+            <p>Cérémonies, sorties, rencontres : retrouvez les dates à noter pour les élèves et les parents.</p>
+
+            <div class="evt-filtres" role="group" aria-label="Filtrer les événements">
+                <button type="button" class="evt-filtre actif" data-filtre="tous" aria-pressed="true">Tous</button>
+                <button type="button" class="evt-filtre" data-filtre="ceremonie" aria-pressed="false">Cérémonies</button>
+                <button type="button" class="evt-filtre" data-filtre="sortie" aria-pressed="false">Sorties</button>
+                <button type="button" class="evt-filtre" data-filtre="culture" aria-pressed="false">Culture &amp; sport</button>
+                <button type="button" class="evt-filtre" data-filtre="rencontre" aria-pressed="false">Rencontres</button>
+            </div>
+
+            <div class="evt-grille">
+                <article class="evt-carte cat-sortie" data-categorie="sortie" data-date="2026-11-11">
+                    <div class="evt-date"><strong>11</strong><span>nov.</span></div>
+                    <div class="evt-corps">
+                        <div class="evt-entete">
+                            <span class="evt-tag">Sorties</span>
+                            <span class="evt-delai"></span>
+                        </div>
+                        <h3>Sortie pédagogique des classes de sciences</h3>
+                        <p class="evt-quand">11 novembre 2026</p>
+                        <p>Visite de terrain pour les élèves de 3e et 4e années. Autorisation parentale à signer avant le départ.</p>
+                        <ul class="evt-infos">
+                            <li>🕘 Départ 08h00 – retour 15h00</li>
+                            <li>📍 Lieu communiqué aux parents</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="evt-carte cat-rencontre" data-categorie="rencontre" data-date="2026-11-21">
+                    <div class="evt-date"><strong>21</strong><span>nov.</span></div>
+                    <div class="evt-corps">
+                        <div class="evt-entete">
+                            <span class="evt-tag">Rencontres</span>
+                            <span class="evt-delai"></span>
+                        </div>
+                        <h3>Journée portes ouvertes</h3>
+                        <p class="evt-quand">21 novembre 2026</p>
+                        <p>Visite des classes et des laboratoires, rencontre avec l'équipe pédagogique.</p>
+                        <ul class="evt-infos">
+                            <li>🕘 09h00 – 13h00</li>
+                            <li>📍 Au collège</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="evt-carte cat-ceremonie" data-categorie="ceremonie" data-date="2026-12-18">
+                    <div class="evt-date"><strong>18</strong><span>déc.</span></div>
+                    <div class="evt-corps">
+                        <div class="evt-entete">
+                            <span class="evt-tag">Cérémonies</span>
+                            <span class="evt-delai"></span>
+                        </div>
+                        <h3>Fête de fin de trimestre</h3>
+                        <p class="evt-quand">18 décembre 2026</p>
+                        <p>Spectacles, expositions et remise des bulletins du 1er trimestre.</p>
+                        <ul class="evt-infos">
+                            <li>🕘 10h00</li>
+                            <li>📍 Cour du collège</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="evt-carte cat-culture" data-categorie="culture" data-date="2027-02-08" data-fin="2027-02-13">
+                    <div class="evt-date"><strong>08</strong><span>févr.</span></div>
+                    <div class="evt-corps">
+                        <div class="evt-entete">
+                            <span class="evt-tag">Culture &amp; sport</span>
+                            <span class="evt-delai"></span>
+                        </div>
+                        <h3>Semaine culturelle</h3>
+                        <p class="evt-quand">8 – 13 février 2027</p>
+                        <p>Théâtre, chorale, expositions et concours de lecture.</p>
+                        <ul class="evt-infos">
+                            <li>🕘 Toute la semaine</li>
+                            <li>📍 Au collège</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="evt-carte cat-culture" data-categorie="culture" data-date="2027-03-20">
+                    <div class="evt-date"><strong>20</strong><span>mars</span></div>
+                    <div class="evt-corps">
+                        <div class="evt-entete">
+                            <span class="evt-tag">Culture &amp; sport</span>
+                            <span class="evt-delai"></span>
+                        </div>
+                        <h3>Tournoi inter-classes</h3>
+                        <p class="evt-quand">20 mars 2027</p>
+                        <p>Football, basket et jeux collectifs entre les classes, avec remise de médailles.</p>
+                        <ul class="evt-infos">
+                            <li>🕘 09h00 – 16h00</li>
+                            <li>📍 Terrain de sport du collège</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="evt-carte cat-rencontre" data-categorie="rencontre" data-date="2027-03-26">
+                    <div class="evt-date"><strong>26</strong><span>mars</span></div>
+                    <div class="evt-corps">
+                        <div class="evt-entete">
+                            <span class="evt-tag">Rencontres</span>
+                            <span class="evt-delai"></span>
+                        </div>
+                        <h3>Réunion parents-enseignants</h3>
+                        <p class="evt-quand">26 mars 2027</p>
+                        <p>Bilan du 2e trimestre et échanges individuels avec les enseignants.</p>
+                        <ul class="evt-infos">
+                            <li>🕘 15h00</li>
+                            <li>📍 Salles de classe</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="evt-carte cat-sortie" data-categorie="sortie" data-date="2027-06-01">
+                    <div class="evt-date"><strong>01</strong><span>juin</span></div>
+                    <div class="evt-corps">
+                        <div class="evt-entete">
+                            <span class="evt-tag">Sorties</span>
+                            <span class="evt-delai"></span>
+                        </div>
+                        <h3>Sortie de fin d'année</h3>
+                        <p class="evt-quand">1er juin 2027</p>
+                        <p>Une journée de détente et de découverte pour tous les élèves.</p>
+                        <ul class="evt-infos">
+                            <li>🕘 08h00 – 16h00</li>
+                            <li>📍 Lieu communiqué aux parents</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="evt-carte cat-ceremonie" data-categorie="ceremonie" data-date="2027-06-25">
+                    <div class="evt-date"><strong>25</strong><span>juin</span></div>
+                    <div class="evt-corps">
+                        <div class="evt-entete">
+                            <span class="evt-tag">Cérémonies</span>
+                            <span class="evt-delai"></span>
+                        </div>
+                        <h3>Remise des prix et des diplômes</h3>
+                        <p class="evt-quand">25 juin 2027</p>
+                        <p>Cérémonie de clôture de l'année scolaire en présence des familles.</p>
+                        <ul class="evt-infos">
+                            <li>🕘 10h00</li>
+                            <li>📍 Cour du collège</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+          </section>
+
+         <!-- Section événements 3 -->
+          <section class="evenements-3-section">
+            <div class="big-block">
+                <h2>Ne ratez aucune date</h2>
+                <p>Retrouvez toutes les périodes de l'année dans le calendrier scolaire.</p>
+
+                <a href="calendrier.html" id="savoir-btn" aria-label="Voir le calendrier scolaire">Voir le calendrier</a>
+            </div>
+          </section>
+    </main>
+
+    <!-- Footer -->
+     <footer>
+        <div class="foot-container">
+
+        <div class="foot-logo">
+            <div class="logo">
+                <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                <span>Collège <strong>Horizon</strong></span>
+            </div>
+            <p>Former des citoyens instruits,
+                responsables et ouverts sur le monde.
+            </p>
+        </div>
+
+        <div class="foot-links">
+            <ul class="foot-menu">
+                <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                <li><a href="evenements.html" class="active" aria-label="Événements">Événements</a></li>
+                <li><a href="contact.html" aria-label="Page de contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-infos">
+            <ul class="foot-menu">
+                <li><a href="contact.html" aria-label="Inscription">Inscription</a></li>
+                <li><a href="calendrier.html" aria-label="Calendrier scolaire">Calendrier scolaire</a></li>
+                <li><a href="regulations.html" aria-label="Règlement intérieur">Règlement intérieur</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-contact-infos">
+            <p>1234 Candy avenue, Kinshasa/ Lemba RDC</p>
+            <a href="tel:+243844583063">+243 84 45 83 063</a>
+            <a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a>
+        </div>
+
+        <div class="foot-media-social">
+            <a href="facebook" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Icone facebook" class="social-img"></a>
+            <a href="instagram" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Icone instagram" class="social-img"></a>
+            <a href="linkedin" target="_blank" aria-label="Linkedin"><img src="images/linkedin.svg" alt="Icone Linkedin" class="social-img"></a>
+        </div>
+
+       </div>
+
+       <span>©2026 Collège Horizon. Tous droits réservés.</span>
+
+     </footer>
+
+    </div>
+
+    <script src="index4.js"></script>
+</body>
+</html>

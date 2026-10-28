@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Calendrier scolaire 2026-2027 du Collège Horizon : rentrée, trimestres, examens, réunions de parents, événements, vacances et jours fériés.">
+    <meta name="keywords" content="calendrier scolaire, année scolaire 2026-2027, rentrée scolaire, examens, vacances scolaires, réunion de parents, Collège Horizon, école Kinshasa">
+    <title>Calendrier scolaire 2026-2027 | Collège Horizon</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/chapeau-de-remise-de-diplome.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+
+     <main>
+        <!-- Header -->
+         <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                    <span>Collège <strong>Horizon</strong></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                     <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                     <li><a href="evenement.html" aria-label="Page d'événement">Événement</a></li>
+                      <li><a href="contact.html" aria-label="Page de contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="banner">
+                <img src="images/calendrier.jpg" alt="Élèves et enseignants lors d'un événement scolaire" class="banner-img">
+
+                <div class="banner-contenus">
+                    <h1>Calendrier <strong>scolaire</strong></h1>
+                    <p>Année scolaire 2026-2027 : toutes les dates importantes en un coup d'œil.</p>
+                </div>
+            </div>
+         </header>
+
+         <!-- Bande défilante -->
+          <section class="calendrier-bande" aria-label="Annonces importantes">
+            
+            <div class="bande-fenetre">
+                <div class="bande-piste">
+                    <ul class="bande-liste">
+                        <li>Inscriptions ouvertes pour l'année scolaire 2026-2027</li>
+                        <li>Journée portes ouvertes : samedi 21 novembre 2026</li>
+                        <li>Examens du 1er trimestre : du 30 novembre au 11 décembre</li>
+                        <li>Remise des bulletins : vendredi 18 décembre</li>
+                        <li>Vacances de Noël : du 21 décembre au 4 janvier</li>
+                        <li>Reprise des cours : mardi 5 janvier 2027</li>
+                    </ul>
+                    <!-- Copie identique pour une boucle continue (ignorée par les lecteurs d'écran) -->
+                    <ul class="bande-liste" aria-hidden="true">
+                        <li>Inscriptions ouvertes pour l'année scolaire 2026-2027</li>
+                        <li>Journée portes ouvertes : samedi 21 novembre 2026</li>
+                        <li>Examens du 1er trimestre : du 30 novembre au 11 décembre</li>
+                        <li>Remise des bulletins : vendredi 18 décembre</li>
+                        <li>Vacances de Noël : du 21 décembre au 4 janvier</li>
+                        <li>Reprise des cours : mardi 5 janvier 2027</li>
+                    </ul>
+                </div>
+            </div>
+          </section>
+
+         <!-- Section calendrier 1 : les trimestres -->
+          <section class="calendrier-1-section">
+            <h2>L'année en trois trimestres</h2>
+            <p>Année scolaire 2026-2027 : les grandes périodes à retenir.</p>
+
+            <!-- Rempli automatiquement par script.js -->
+            <div class="cal-prochain" hidden>
+                <span class="cal-prochain-label">Prochain rendez-vous</span>
+                <strong class="cal-prochain-titre"></strong>
+                <span class="cal-prochain-date"></span>
+            </div>
+
+            <div class="cal-trimestres">
+                    <article class="cal-trimestre">
+                        <h3>1er trimestre</h3>
+                        <p class="cal-periode">7 septembre – 18 décembre 2026</p>
+                        <ul>
+                            <li><strong>Examens :</strong> 30 novembre – 11 décembre</li>
+                            <li><strong>Clôture :</strong> 18 décembre : bulletins</li>
+                        </ul>
+                    </article>
+                    <article class="cal-trimestre">
+                        <h3>2e trimestre</h3>
+                        <p class="cal-periode">5 janvier – 26 mars 2027</p>
+                        <ul>
+                            <li><strong>Examens :</strong> 8 – 19 mars</li>
+                            <li><strong>Clôture :</strong> 26 mars : bulletins</li>
+                        </ul>
+                    </article>
+                    <article class="cal-trimestre">
+                        <h3>3e trimestre</h3>
+                        <p class="cal-periode">12 avril – 25 juin 2027</p>
+                        <ul>
+                            <li><strong>Examens :</strong> 7 – 18 juin</li>
+                            <li><strong>Clôture :</strong> 25 juin : remise des prix</li>
+                        </ul>
+                    </article>
+            </div>
+          </section>
+
+         <!-- Section calendrier 2 : les grandes dates -->
+          <section class="calendrier-2-section">
+            <h2>Les dates à retenir</h2>
+            <p>Réunions, examens, événements et vacances, mois après mois.</p>
+
+            <div class="cal-timeline">
+                    <article class="cal-evenement type-rentree" data-date="2026-09-07">
+                        <div class="cal-date"><strong>07</strong><span>sept.</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Rentrée</span>
+                            <h3>Rentrée scolaire</h3>
+                            <p class="cal-date-texte">7 septembre 2026</p>
+                            <p>Accueil des élèves, remise des emplois du temps et début des cours.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-reunion" data-date="2026-09-12">
+                        <div class="cal-date"><strong>12</strong><span>sept.</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Réunion</span>
+                            <h3>Réunion de parents</h3>
+                            <p class="cal-date-texte">12 septembre 2026</p>
+                            <p>Présentation de l'année scolaire, des enseignants et des règles de vie.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-evenement" data-date="2026-10-17">
+                        <div class="cal-date"><strong>17</strong><span>oct.</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Événement</span>
+                            <h3>Journée sportive inter-classes</h3>
+                            <p class="cal-date-texte">17 octobre 2026</p>
+                            <p>Compétitions amicales, jeux collectifs et remise de médailles.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-evenement" data-date="2026-11-21">
+                        <div class="cal-date"><strong>21</strong><span>nov.</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Événement</span>
+                            <h3>Journée portes ouvertes</h3>
+                            <p class="cal-date-texte">21 novembre 2026</p>
+                            <p>Visite des classes et des laboratoires, rencontre avec l'équipe pédagogique.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-examens" data-date="2026-11-30" data-fin="2026-12-11">
+                        <div class="cal-date"><strong>30</strong><span>nov.</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Examens</span>
+                            <h3>Examens du 1er trimestre</h3>
+                            <p class="cal-date-texte">30 novembre – 11 décembre 2026</p>
+                            <p>Évaluations de toutes les matières selon l'horaire affiché à l'école.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-evenement" data-date="2026-12-18">
+                        <div class="cal-date"><strong>18</strong><span>déc.</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Événement</span>
+                            <h3>Remise des bulletins et fête de fin de trimestre</h3>
+                            <p class="cal-date-texte">18 décembre 2026</p>
+                            <p>Spectacles, expositions et remise des bulletins du premier trimestre.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-vacances" data-date="2026-12-21" data-fin="2027-01-04">
+                        <div class="cal-date"><strong>21</strong><span>déc.</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Vacances</span>
+                            <h3>Vacances de Noël</h3>
+                            <p class="cal-date-texte">21 décembre 2026 – 4 janvier 2027</p>
+                            <p>Reprise des cours le mardi 5 janvier 2027.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-evenement" data-date="2027-02-08" data-fin="2027-02-13">
+                        <div class="cal-date"><strong>08</strong><span>févr.</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Événement</span>
+                            <h3>Semaine culturelle</h3>
+                            <p class="cal-date-texte">8 – 13 février 2027</p>
+                            <p>Théâtre, chorale, expositions et concours de lecture.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-examens" data-date="2027-03-08" data-fin="2027-03-19">
+                        <div class="cal-date"><strong>08</strong><span>mars</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Examens</span>
+                            <h3>Examens du 2e trimestre</h3>
+                            <p class="cal-date-texte">8 – 19 mars 2027</p>
+                            <p>Évaluations de toutes les matières selon l'horaire affiché à l'école.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-reunion" data-date="2027-03-26">
+                        <div class="cal-date"><strong>26</strong><span>mars</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Réunion</span>
+                            <h3>Remise des bulletins du 2e trimestre</h3>
+                            <p class="cal-date-texte">26 mars 2027</p>
+                            <p>Rencontre parents-enseignants et bilan du trimestre.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-vacances" data-date="2027-03-29" data-fin="2027-04-09">
+                        <div class="cal-date"><strong>29</strong><span>mars</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Vacances</span>
+                            <h3>Vacances de Pâques</h3>
+                            <p class="cal-date-texte">29 mars – 9 avril 2027</p>
+                            <p>Reprise des cours le lundi 12 avril 2027.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-examens" data-date="2027-06-07" data-fin="2027-06-18">
+                        <div class="cal-date"><strong>07</strong><span>juin</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Examens</span>
+                            <h3>Examens de fin d'année</h3>
+                            <p class="cal-date-texte">7 – 18 juin 2027</p>
+                            <p>Évaluations finales et délibérations des conseils de classe.</p>
+                        </div>
+                    </article>
+                    <article class="cal-evenement type-evenement" data-date="2027-06-25">
+                        <div class="cal-date"><strong>25</strong><span>juin</span></div>
+                        <div class="cal-corps">
+                            <span class="cal-tag">Événement</span>
+                            <h3>Remise des prix et des diplômes</h3>
+                            <p class="cal-date-texte">25 juin 2027</p>
+                            <p>Cérémonie de clôture de l'année scolaire en présence des familles.</p>
+                        </div>
+                    </article>
+            </div>
+          </section>
+
+         <!-- Section calendrier 3 : vacances et jours fériés -->
+          <section class="calendrier-3-section">
+            <h2>Vacances et jours fériés</h2>
+            <p>Les périodes sans cours. Les jours fériés sont donnés à titre indicatif.</p>
+
+            <div class="cal-vacances">
+                <div class="cal-vacances-liste">
+                        <article class="cal-vacance">
+                            <span class="cal-icone" aria-hidden="true">🎄</span>
+                            <h3>Vacances de Noël</h3>
+                            <p>21 décembre 2026 – 4 janvier 2027</p>
+                            <small>Reprise le mardi 5 janvier</small>
+                        </article>
+                        <article class="cal-vacance">
+                            <span class="cal-icone" aria-hidden="true">🐣</span>
+                            <h3>Vacances de Pâques</h3>
+                            <p>29 mars – 9 avril 2027</p>
+                            <small>Reprise le lundi 12 avril</small>
+                        </article>
+                        <article class="cal-vacance">
+                            <span class="cal-icone" aria-hidden="true">☀️</span>
+                            <h3>Grandes vacances</h3>
+                            <p>À partir du 28 juin 2027</p>
+                            <small>Rentrée début septembre 2027</small>
+                        </article>
+                </div>
+
+                <aside class="cal-feries">
+                    <h3>Jours fériés nationaux</h3>
+                    <ul>
+                            <li><strong>1er janvier</strong><span>Nouvel An</span></li>
+                            <li><strong>4 janvier</strong><span>Journée des martyrs de l'indépendance</span></li>
+                            <li><strong>16 et 17 janvier</strong><span>Journées des héros nationaux</span></li>
+                            <li><strong>1er mai</strong><span>Fête du travail</span></li>
+                            <li><strong>17 mai</strong><span>Fête de la libération</span></li>
+                            <li><strong>30 juin</strong><span>Fête de l'indépendance</span></li>
+                            <li><strong>25 décembre</strong><span>Noël</span></li>
+                    </ul>
+                </aside>
+            </div>
+          </section>
+
+         <!-- Section calendrier 4 -->
+          <section class="calendrier-4-section">
+            <div class="big-block">
+                <h2>Une question sur le calendrier ?</h2>
+                <p>Le secrétariat vous répond du lundi au samedi.</p>
+
+                <a href="contact.html" id="savoir-btn" aria-label="Prendre contact">Nous contacter</a>
+            </div>
+          </section>
+    </main>
+
+    <!-- Footer -->
+     <footer>
+        <div class="foot-container">
+
+        <div class="foot-logo">
+            <div class="logo">
+                <img src="images/chapeau-de-remise-de-diplome.png" alt="" class="logo-img">
+                <span>Collège <strong>Horizon</strong></span>
+            </div>
+            <p>Former des citoyens instruits,
+                responsables et ouverts sur le monde.
+            </p>
+        </div>
+
+        <div class="foot-links">
+            <ul class="foot-menu">
+                <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
+                <li><a href="programme.html" aria-label="Page de programmes">Programmes</a></li>
+                <li><a href="evenement.html" aria-label="Page d'événement">Événement</a></li>
+                <li><a href="contact.html" aria-label="Page de contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-infos">
+            <ul class="foot-menu">
+                <li><a href="contact.html" aria-label="Inscription">Inscription</a></li>
+                <li><a href="calendrier.html" class="active" aria-label="Calendrier scolaire">Calendrier scolaire</a></li>
+                <li><a href="regulations.html" aria-label="Règlement intérieur">Règlement intérieur</a></li>
+                <li><a href="payment.html" aria-label="Payements">Payements</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-contact-infos">
+            <p>1234 Candy avenue, Kinshasa/ Lemba RDC</p>
+            <a href="tel:+243844583063">+243 84 45 83 063</a>
+            <a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a>
+        </div>
+
+        <div class="foot-media-social">
+            <a href="facebook" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Icone facebook" class="social-img"></a>
+            <a href="instagram" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Icone instagram" class="social-img"></a>
+            <a href="linkedin" target="_blank" aria-label="Linkedin"><img src="images/linkedin.svg" alt="Icone Linkedin" class="social-img"></a>
+        </div>
+
+       </div>
+
+       <span>©2026 Collège Horizon. Tous droits réservés.</span>
+
+     </footer>
+
+    </div>
+
+    <script src="index3.js"></script>
+</body>
+</html>
